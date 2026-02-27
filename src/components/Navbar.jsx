@@ -2,8 +2,8 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuthStore } from "../store/authStore";
 import { useCartStore } from "../store/cartStore";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingCart, Menu, X, User, LogOut } from "lucide-react";
-import { useState } from "react";
+import { ShoppingCart, Menu, X, User, LogOut, Heart } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const user = useAuthStore((state) => state.user);
@@ -14,6 +14,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [wishlistCount, setWishlistCount] = useState(0);
 
   // Prevent flicker before auth hydration
   if (!isInit) return null;
@@ -25,6 +26,24 @@ export default function Navbar() {
   };
 
   const cartCount = cart?.items?.length || 0;
+
+  // Load wishlist count
+  useEffect(() => {
+    async function loadWishlistCount() {
+      if (!user) {
+        setWishlistCount(0);
+        return;
+      }
+      try {
+        const { getWishlist } = await import("../api/wishlist");
+        const data = await getWishlist();
+        setWishlistCount(data.wishlist?.length || 0);
+      } catch (err) {
+        console.error("Failed to load wishlist:", err);
+      }
+    }
+    loadWishlistCount();
+  }, [user]);
 
   const isAuthPage =
     location.pathname === "/login" || location.pathname === "/register";
@@ -65,27 +84,50 @@ export default function Navbar() {
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Cart - PRIVATE authenticated users only */}
             {user && user.clientType === "PRIVATE" && (
-              <motion.button
-                onClick={() => navigate("/cart")}
-                className="relative p-2.5 sm:p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 hover:shadow-md transition-all duration-200"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                aria-label="Cart"
-              >
-                <ShoppingCart size={20} strokeWidth={2} />
-                <AnimatePresence>
-                  {cartCount > 0 && (
-                    <motion.span
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      exit={{ scale: 0 }}
-                      className="absolute -top-1 -right-1 bg-gradient-to-r from-kashmiri-chinar-500 to-kashmiri-saffron-500 text-white text-xs font-bold rounded-full min-w-[22px] h-5 flex items-center justify-center px-1.5 shadow-lg"
-                    >
-                      {cartCount}
-                    </motion.span>
-                  )}
-                </AnimatePresence>
-              </motion.button>
+              <>
+                <motion.button
+                  onClick={() => navigate("/wishlist")}
+                  className="relative p-2.5 sm:p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 hover:shadow-md transition-all duration-200"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label="Wishlist"
+                >
+                  <Heart size={20} strokeWidth={2} />
+                  <AnimatePresence>
+                    {wishlistCount > 0 && (
+                      <motion.span
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        exit={{ scale: 0 }}
+                        className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full min-w-[22px] h-5 flex items-center justify-center px-1.5 shadow-lg"
+                      >
+                        {wishlistCount}
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
+                </motion.button>
+                <motion.button
+                  onClick={() => navigate("/cart")}
+                  className="relative p-2.5 sm:p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 hover:shadow-md transition-all duration-200"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label="Cart"
+                >
+                  <ShoppingCart size={20} strokeWidth={2} />
+                  <AnimatePresence>
+                    {cartCount > 0 && (
+                      <motion.span
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        exit={{ scale: 0 }}
+                        className="absolute -top-1 -right-1 bg-gradient-to-r from-kashmiri-chinar-500 to-kashmiri-saffron-500 text-white text-xs font-bold rounded-full min-w-[22px] h-5 flex items-center justify-center px-1.5 shadow-lg"
+                      >
+                        {cartCount}
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
+                </motion.button>
+              </>
             )}
 
             {/* User Section */}

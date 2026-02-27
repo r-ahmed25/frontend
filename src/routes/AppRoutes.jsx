@@ -48,6 +48,7 @@ import ProductListGuest from "../pages/products/ProductListGuest";
 import ServiceList from "../pages/services/ServicesList";
 import ProductDetailsGuest from "../pages/products/ProductDetailsGuest";
 import ServiceEnquiry from "../pages/services/ServiceEnquiry";
+import Wishlist from "../pages/private/Wishlist";
 
 export default function AppRoutes() {
   const user = useAuthStore((state) => state.user);
@@ -122,6 +123,14 @@ export default function AppRoutes() {
         element={
           <ProtectedRoute>
             <Cart />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/wishlist"
+        element={
+          <ProtectedRoute>
+            <Wishlist />
           </ProtectedRoute>
         }
       />
