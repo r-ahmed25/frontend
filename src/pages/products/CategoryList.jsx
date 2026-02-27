@@ -279,16 +279,26 @@ export default function CategoryList() {
                     />
 
                     <div className="p-6">
-                      {/* Icon Container */}
+                      {/* Image Container */}
                       <div className="relative mb-5">
-                        <div
-                          className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${categoryGradients[index % categoryGradients.length]}
-                          flex items-center justify-center text-3xl shadow-lg
-                          group-hover:scale-110 group-hover:shadow-xl
-                          transition-all duration-300`}
-                        >
-                          {categoryIcons[cat.name.toLowerCase()] ||
-                            categoryIcons.default}
+                        <div className="w-full h-40 rounded-2xl overflow-hidden group-hover:scale-105 transition-all duration-300 shadow-md">
+                          {cat.image ? (
+                            <img
+                              src={cat.image}
+                              alt={cat.name}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                          ) : (
+                            <div
+                              className={`w-full h-full bg-gradient-to-br ${categoryGradients[index % categoryGradients.length]} flex items-center justify-center`}
+                            >
+                              <span className="text-4xl">
+                                {categoryIcons[cat.name.toLowerCase()] ||
+                                  categoryIcons.default}
+                              </span>
+                            </div>
+                          )}
                         </div>
                         {/* Product count badge */}
                         <div
@@ -346,12 +356,24 @@ export default function CategoryList() {
                     transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1
                     hover:border-blue-300 dark:hover:border-blue-700 text-center"
                   >
-                    <div
-                      className={`w-12 h-12 mx-auto rounded-xl bg-gradient-to-br ${categoryGradients[index % categoryGradients.length]}
-                      flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                    >
-                      {categoryIcons[cat.name.toLowerCase()] ||
-                        categoryIcons.default}
+                    <div className="w-full h-24 rounded-xl overflow-hidden mb-3 group-hover:scale-105 transition-transform duration-300 shadow-md">
+                      {cat.image ? (
+                        <img
+                          src={cat.image}
+                          alt={cat.name}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div
+                          className={`w-full h-full bg-gradient-to-br ${categoryGradients[index % categoryGradients.length]} flex items-center justify-center`}
+                        >
+                          <span className="text-2xl">
+                            {categoryIcons[cat.name.toLowerCase()] ||
+                              categoryIcons.default}
+                          </span>
+                        </div>
+                      )}
                     </div>
                     <h3
                       className="text-sm font-semibold text-slate-900 dark:text-white 
