@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 
 export default function ProductListGuest() {
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [loading, setLoading] = useState(true);
+  const [loadingCategories, setLoadingCategories] = useState(true);
   const [error, setError] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -13,10 +16,35 @@ export default function ProductListGuest() {
 
   const itemsPerPage = 12;
 
+  // Load categories
+  useEffect(() => {
+    async function loadCategories() {
+      try {
+        const res = await fetch(`${API_URL}/public/categories`, {
+          cache: "no-store",
+        });
+        const data = await res.json();
+        if (res.ok) {
+          setCategories(data);
+        }
+      } catch (err) {
+        console.error("Failed to load categories:", err);
+      } finally {
+        setLoadingCategories(false);
+      }
+    }
+    loadCategories();
+  }, []);
+
+  // Load products
   useEffect(() => {
     async function loadProducts() {
+      setLoading(true);
       try {
-        const res = await fetch(`${API_URL}/public/products`, {
+        const url = selectedCategory
+          ? `${API_URL}/public/products?category=${encodeURIComponent(selectedCategory)}`
+          : `${API_URL}/public/products`;
+        const res = await fetch(url, {
           cache: "no-store",
         });
         const data = await res.json();
@@ -30,7 +58,8 @@ export default function ProductListGuest() {
     }
 
     loadProducts();
-  }, []);
+    setCurrentPage(1);
+  }, [selectedCategory]);
 
   const filtered = products.filter((p) =>
     [p.name, p.sku, p.category]
@@ -45,6 +74,24 @@ export default function ProductListGuest() {
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage,
   );
+
+  // Star rating helper
+  const renderStars = (rating) => {
+    return [...Array(5)].map((_, i) => (
+      <svg
+        key={i}
+        className={`w-3.5 h-3.5 ${
+          i < Math.round(rating || 0)
+            ? "fill-amber-400 text-amber-400"
+            : "fill-slate-200 text-slate-200"
+        }`}
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+      </svg>
+    ));
+  };
 
   /* ================= STATES ================= */
 
@@ -85,6 +132,65 @@ export default function ProductListGuest() {
             className="theme-input px-4 py-3 rounded-xl w-full md:w-72"
           />
         </div>
+
+        {/* CATEGORIES - Dropdown on mobile, buttons on desktop */}
+        {!loadingCategories && categories.length > 0 && (
+          <div className="w-full">
+            {/* Mobile Dropdown */}
+            <div className="md:hidden w-full">
+              <div className="relative">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 text-indigo-900 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none cursor-pointer pr-10"
+                >
+                  <option value="">
+                    All Categories (
+                    {categories.reduce((acc, c) => acc + c.count, 0)})
+                  </option>
+                  {categories.map((cat) => (
+                    <option key={cat.name} value={cat.name}>
+                      {cat.name} ({cat.count})
+                    </option>
+                  ))}
+                </select>
+                <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
+                  <svg className="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop Buttons */}
+            <div className="hidden md:flex flex-wrap gap-2">
+              <button
+                onClick={() => setSelectedCategory("")}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  selectedCategory === ""
+                    ? "btn-theme-primary"
+                    : "bg-surface-alt text-slate-600 hover:bg-indigo-50"
+                }`}
+              >
+                All ({categories.reduce((acc, c) => acc + c.count, 0)})
+              </button>
+              {categories.map((cat) => (
+                <button
+                  key={cat.name}
+                  onClick={() => setSelectedCategory(cat.name)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
+                    selectedCategory === cat.name
+                      ? "btn-theme-primary"
+                      : "bg-surface-alt text-slate-600 hover:bg-indigo-50"
+                  }`}
+                >
+                  {cat.name}
+                  <span className="text-xs opacity-70">({cat.count})</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* PRODUCT GRID - Responsive */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -160,6 +266,16 @@ export default function ProductListGuest() {
               <h3 className="mt-4 text-sm font-semibold text-center text-text line-clamp-2">
                 {p.name}
               </h3>
+
+              {/* RATING */}
+              {p.rating?.count > 0 && (
+                <div className="flex items-center gap-1 mt-2">
+                  {renderStars(p.rating.average)}
+                  <span className="text-xs text-slate-500 ml-1">
+                    ({p.rating.average.toFixed(1)})
+                  </span>
+                </div>
+              )}
 
               {/* CTA */}
               <Link
@@ -238,6 +354,19 @@ export default function ProductListGuest() {
                     {selectedProduct.category}
                   </p>
                 </div>
+                {/* Rating in Modal */}
+                {selectedProduct.rating?.count > 0 && (
+                  <div>
+                    <h3 className="font-semibold text-sm mb-1">Rating</h3>
+                    <div className="flex items-center gap-2">
+                      {renderStars(selectedProduct.rating.average)}
+                      <span className="text-xs text-slate-600">
+                        {selectedProduct.rating.average.toFixed(1)} (
+                        {selectedProduct.rating.count} reviews)
+                      </span>
+                    </div>
+                  </div>
+                )}
                 <div>
                   <h3 className="font-semibold text-sm mb-1">Description</h3>
                   <p className="text-xs text-slate-600">
