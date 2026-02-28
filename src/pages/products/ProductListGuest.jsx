@@ -97,8 +97,8 @@ export default function ProductListGuest() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-surface">
-        <div className="animate-spin h-10 w-10 border-b-2 border-indigo-500 rounded-full" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
+        <div className="animate-spin h-10 w-10 border-b-2 border-kashmiri-dal-500 rounded-full" />
       </div>
     );
   }
@@ -114,11 +114,11 @@ export default function ProductListGuest() {
   /* ================= PAGE ================= */
 
   return (
-    <div className="min-h-screen bg-surface px-4 sm:px-6 py-10 sm:py-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-4 sm:px-6 py-10 sm:py-16">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* HEADER */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold hero-gradient-text">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500">
             Our Products
           </h1>
 
@@ -129,7 +129,7 @@ export default function ProductListGuest() {
               setCurrentPage(1);
             }}
             placeholder="Search products..."
-            className="theme-input px-4 py-3 rounded-xl w-full md:w-72"
+            className="w-full pl-12 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-kashmiri-dal-500/50 focus:border-kashmiri-dal-500 transition-all duration-200"
           />
         </div>
 
@@ -142,7 +142,7 @@ export default function ProductListGuest() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 text-indigo-900 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none cursor-pointer pr-10"
+                  className="w-full px-4 py-3 rounded-xl bg-gradient-to-r from-kashmiri-dal-50 to-kashmiri-pashmina-50 dark:from-kashmiri-dal-900/30 dark:to-kashmiri-pashmina-900/30 border border-kashmiri-dal-200 dark:border-kashmiri-dal-700 text-kashmiri-dal-900 dark:text-kashmiri-dal-100 font-medium focus:outline-none focus:ring-2 focus:ring-kashmiri-dal-500/50 focus:border-kashmiri-dal-500 appearance-none cursor-pointer pr-10"
                 >
                   <option value="">
                     All Categories (
@@ -155,7 +155,7 @@ export default function ProductListGuest() {
                   ))}
                 </select>
                 <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
-                  <svg className="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-kashmiri-dal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
@@ -168,8 +168,8 @@ export default function ProductListGuest() {
                 onClick={() => setSelectedCategory("")}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === ""
-                    ? "btn-theme-primary"
-                    : "bg-surface-alt text-slate-600 hover:bg-indigo-50"
+                    ? "bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white shadow-lg shadow-kashmiri-dal-500/25"
+                    : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-kashmiri-dal-50 dark:hover:bg-kashmiri-dal-900/30"
                 }`}
               >
                 All ({categories.reduce((acc, c) => acc + c.count, 0)})
@@ -180,8 +180,8 @@ export default function ProductListGuest() {
                   onClick={() => setSelectedCategory(cat.name)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
                     selectedCategory === cat.name
-                      ? "btn-theme-primary"
-                      : "bg-surface-alt text-slate-600 hover:bg-indigo-50"
+                      ? "bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white shadow-lg shadow-kashmiri-dal-500/25"
+                      : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-kashmiri-dal-50 dark:hover:bg-kashmiri-dal-900/30"
                   }`}
                 >
                   {cat.name}
@@ -199,9 +199,9 @@ export default function ProductListGuest() {
               key={p._id}
               className="
                 relative
-                theme-card bg-surface
+                bg-white dark:bg-slate-900
                 rounded-2xl
-                border border-white/30
+                border border-slate-200/50 dark:border-slate-800/50
                 shadow-lg
                 hover:shadow-xl
                 transition-all duration-300
@@ -212,7 +212,7 @@ export default function ProductListGuest() {
               onClick={() => setSelectedProduct(p)}
             >
               {/* SEGMENT TAG */}
-              {p.segment && (
+                {p.segment && (
                 <span
                   className={`
                     absolute top-4 right-4
@@ -220,7 +220,7 @@ export default function ProductListGuest() {
                     px-2 py-1 rounded-full
                     ${
                       p.segment === "CONSUMER"
-                        ? "bg-indigo-100 text-indigo-700"
+                        ? "bg-kashmiri-dal-100 text-kashmiri-dal-700 dark:bg-kashmiri-dal-900/50 dark:text-kashmiri-dal-300"
                         : "bg-emerald-100 text-emerald-700"
                     }
                   `}
@@ -233,7 +233,7 @@ export default function ProductListGuest() {
                   className="
                     absolute top-4 left-4
                     text-[10px] font-semibold
-                    bg-surface-alt text-slate-700
+                    bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300
                     px-2 py-1 rounded-full
                 "
                 >
@@ -245,7 +245,7 @@ export default function ProductListGuest() {
               <div
                 className="
                   w-full h-40
-                  bg-surface-alt
+                  bg-slate-50 dark:bg-slate-800
                   rounded-xl
                   flex items-center justify-center
                   p-4
@@ -263,7 +263,7 @@ export default function ProductListGuest() {
               </div>
 
               {/* NAME */}
-              <h3 className="mt-4 text-sm font-semibold text-center text-text line-clamp-2">
+              <h3 className="mt-4 text-sm font-semibold text-center text-slate-900 dark:text-white line-clamp-2">
                 {p.name}
               </h3>
 
@@ -283,8 +283,9 @@ export default function ProductListGuest() {
                 className="
                   mt-4
                   text-xs
-                  btn-theme-primary
-                  animate-gradient
+                  bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white
+                  hover:from-kashmiri-dal-600 hover:to-kashmiri-pashmina-600
+                  shadow-lg shadow-kashmiri-dal-500/25
                   px-5 py-3
                   rounded-lg
                   font-semibold
@@ -304,7 +305,7 @@ export default function ProductListGuest() {
             <button
               disabled={currentPage === 1}
               onClick={() => setCurrentPage((p) => p - 1)}
-              className="btn-theme-primary px-5 py-3 rounded-xl disabled:opacity-50"
+              className="bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white px-5 py-3 rounded-xl disabled:opacity-50 shadow-lg shadow-kashmiri-dal-500/25"
             >
               Prev
             </button>
@@ -316,7 +317,7 @@ export default function ProductListGuest() {
             <button
               disabled={currentPage === totalPages}
               onClick={() => setCurrentPage((p) => p + 1)}
-              className="btn-theme-primary px-5 py-3 rounded-xl disabled:opacity-50"
+              className="bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white px-5 py-3 rounded-xl disabled:opacity-50 shadow-lg shadow-kashmiri-dal-500/25"
             >
               Next
             </button>
@@ -326,18 +327,18 @@ export default function ProductListGuest() {
         {/* Product Details Modal */}
         {selectedProduct && (
           <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-            <div className="theme-card bg-surface rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
-              <div className="p-4 border-b border-border/60 flex justify-between items-center">
-                <h2 className="text-lg font-bold">{selectedProduct.name}</h2>
+            <div className="bg-white dark:bg-slate-900 rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+              <div className="p-4 border-b border-slate-200 dark:border-slate-700 flex justify-between items-center">
+                <h2 className="text-lg font-bold text-slate-900 dark:text-white">{selectedProduct.name}</h2>
                 <button
                   onClick={() => setSelectedProduct(null)}
-                  className="text-slate-500 hover:text-slate-700"
+                  className="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
                 >
                   ×
                 </button>
               </div>
               <div className="p-4 space-y-4">
-                <div className="w-full h-40 rounded-xl bg-surface-alt flex items-center justify-center">
+                <div className="w-full h-40 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center">
                   {selectedProduct.images?.[0]?.url ? (
                     <img
                       src={selectedProduct.images[0].url}
@@ -368,20 +369,20 @@ export default function ProductListGuest() {
                   </div>
                 )}
                 <div>
-                  <h3 className="font-semibold text-sm mb-1">Description</h3>
-                  <p className="text-xs text-slate-600">
+                  <h3 className="font-semibold text-sm mb-1 text-slate-900 dark:text-white">Description</h3>
+                  <p className="text-xs text-slate-600 dark:text-slate-400">
                     {selectedProduct.description}
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm mb-1">Price</h3>
-                  <p className="text-xs text-slate-600">
+                  <h3 className="font-semibold text-sm mb-1 text-slate-900 dark:text-white">Price</h3>
+                  <p className="text-xs font-semibold text-kashmiri-dal-600 dark:text-kashmiri-dal-400">
                     ₹{selectedProduct.price}
                   </p>
                 </div>
                 <Link
                   to={`/products-guest/${selectedProduct._id}`}
-                  className="btn-theme-primary w-full py-2 rounded-xl font-semibold text-sm"
+                  className="w-full py-2 rounded-xl font-semibold text-sm bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl transition-all"
                   onClick={() => setSelectedProduct(null)}
                 >
                   View Full Details
