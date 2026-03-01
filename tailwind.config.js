@@ -30,17 +30,17 @@ export default {
            🌿 Modern Professional Palette
         =================================*/
         primary: {
-          50: "#f0f9ff",
-          100: "#e0f2fe",
-          200: "#bae6fd",
-          300: "#7dd3fc",
-          400: "#38bdf8",
-          500: "#0ea5e9",
-          600: "#0284c7",
-          700: "#0369a1",
-          800: "#075985",
-          900: "#0c4a6e",
-          950: "#082f49",
+          50: "#eef2ff",
+          100: "#e0e7ff",
+          200: "#c7d2fe",
+          300: "#a5b4fc",
+          400: "#818cf8",
+          500: "#6366f1",
+          600: "#4f46e5",
+          700: "#4338ca",
+          800: "#3730a3",
+          900: "#312e81",
+          950: "#1e1b4b",
         },
 
         secondary: {
@@ -59,17 +59,17 @@ export default {
         },
 
         accent: {
-          50: "#fdf4ff",
-          100: "#fae8ff",
-          200: "#f5d0fe",
-          300: "#f0abfc",
-          400: "#e879f9",
-          500: "#d946ef",
-          600: "#c026d3",
-          700: "#a21caf",
-          800: "#86198f",
-          900: "#701a75",
-          950: "#4a044e",
+          50: "#eef2ff",
+          100: "#e0e7ff",
+          200: "#c7d2fe",
+          300: "#a5b4fc",
+          400: "#818cf8",
+          500: "#6366f1",
+          600: "#4f46e5",
+          700: "#4338ca",
+          800: "#3730a3",
+          900: "#312e81",
+          950: "#1e1b4b",
         },
 
         success: {
@@ -113,53 +113,9 @@ export default {
 
         // Brand colors for Cutting Edge Enterprises
         brand: {
-          light: "#60a5fa",
-          DEFAULT: "#2563eb",
-          dark: "#1d4ed8",
-        },
-
-        // Kashmiri-inspired cultural colors
-        kashmiri: {
-          dal: {
-            50: "#f0f9ff",
-            100: "#e0f2fe",
-            200: "#bae6fd",
-            300: "#7dd3fc",
-            400: "#38bdf8",
-            500: "#2d5a87", // Dal Lake blue
-            600: "#1e3a5f", // Night sky over Dal
-            700: "#0c4a6e",
-          },
-          saffron: {
-            50: "#fff7ed",
-            100: "#ffedd5",
-            200: "#fed7aa",
-            300: "#fdba74",
-            400: "#fb923c",
-            500: "#c2410c", // Kashmiri Saffron
-            600: "#9a3412",
-            700: "#7c2d12",
-          },
-          pashmina: {
-            50: "#faf5ff",
-            100: "#f3e8ff",
-            200: "#e9d5ff",
-            300: "#d8b4fe",
-            400: "#c084fc",
-            500: "#7c3aed", // Royal Pashmina purple
-            600: "#6b21a8",
-            700: "#581c87",
-          },
-          chinar: {
-            50: "#fef2f2",
-            100: "#fee2e2",
-            200: "#fecaca",
-            300: "#fca5a5",
-            400: "#f87171",
-            500: "#dc2626", // Chinar red
-            600: "#b91c1c",
-            700: "#991b1b",
-          },
+          light: "#818cf8",
+          DEFAULT: "#4f46e5",
+          dark: "#4338ca",
         },
       },
 
@@ -179,11 +135,6 @@ export default {
           "0 10px 20px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.05)",
         "elevation-4":
           "0 20px 40px rgba(0,0,0,0.15), 0 5px 10px rgba(0,0,0,0.05)",
-
-        // Glow effects
-        "glow-primary": "0 0 20px rgba(37, 99, 235, 0.3)",
-        "glow-accent": "0 0 20px rgba(217, 70, 239, 0.3)",
-        "glow-success": "0 0 20px rgba(34, 197, 94, 0.3)",
 
         // Card shadows
         card: "0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)",
@@ -349,8 +300,8 @@ export default {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gradient-primary": "linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)",
-        "gradient-accent": "linear-gradient(135deg, #7c3aed 0%, #ec4899 100%)",
+        "gradient-primary": "linear-gradient(135deg, #4f46e5 0%, #6366f1 100%)",
+        "gradient-accent": "linear-gradient(135deg, #4f46e5 0%, #818cf8 100%)",
         "gradient-success": "linear-gradient(135deg, #16a34a 0%, #22c55e 100%)",
         "gradient-mesh":
           "radial-gradient(at 40% 20%, hsla(228,100%,74%,0.3) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,0.2) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,0.2) 0px, transparent 50%)",

@@ -108,8 +108,8 @@ export default function MyServiceEnquiries() {
               animate={{ opacity: 1, y: 0 }}
               className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg shadow-slate-200/50 dark:shadow-slate-900/50 border border-slate-200/50 dark:border-slate-800/50 p-8 md:p-12 text-center"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-kashmiri-dal-100 to-kashmiri-pashmina-100 dark:from-kashmiri-dal-900/30 dark:to-kashmiri-pashmina-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Inbox className="w-10 h-10 text-kashmiri-dal-500" />
+              <div className="w-20 h-20 bg-indigo-100 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Inbox className="w-10 h-10 text-indigo-600" />
               </div>
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
                 No Service Enquiries Yet
@@ -120,7 +120,7 @@ export default function MyServiceEnquiries() {
               </p>
               <a
                 href="/services"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 text-white font-semibold rounded-xl shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl hover:shadow-kashmiri-pashmina-500/30 hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-0.5 transition-all duration-200"
               >
                 Browse Services
                 <ArrowRight className="w-4 h-4" />
@@ -169,7 +169,7 @@ export default function MyServiceEnquiries() {
             transition={{ duration: 0.4 }}
             className="mb-6 md:mb-8"
           >
-            <span className="inline-block px-4 py-1.5 mb-3 text-xs font-semibold uppercase tracking-widest text-kashmiri-dal-600 dark:text-kashmiri-dal-400 bg-kashmiri-dal-50 dark:bg-kashmiri-dal-900/30 rounded-full">
+            <span className="inline-block px-4 py-1.5 mb-3 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 rounded-full">
               Service Enquiries
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">
@@ -188,7 +188,7 @@ export default function MyServiceEnquiries() {
             className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-8"
           >
             <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-lg border border-slate-200/50 dark:border-slate-800/50 p-4 text-center transition-all duration-200 hover:-translate-y-1">
-              <div className="text-2xl font-bold bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
                 {enquiries.length}
               </div>
               <div className="text-sm text-slate-500 dark:text-slate-400">
@@ -240,7 +240,7 @@ export default function MyServiceEnquiries() {
                     {/* Service Info */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start gap-4">
-                        <div className="w-14 h-14 bg-gradient-to-br from-kashmiri-dal-500 to-kashmiri-pashmina-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-kashmiri-dal-500/25">
+                        <div className="w-14 h-14 bg-indigo-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-indigo-500/25">
                           <FileText className="w-7 h-7 text-white" />
                         </div>
                         <div className="min-w-0 flex-1">
@@ -290,7 +290,7 @@ export default function MyServiceEnquiries() {
                     {enq.status === "QUOTED" ? (
                       <a
                         href={`/service-quotes/enquiry/${enq._id}`}
-                        className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 text-white font-semibold rounded-xl shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl hover:shadow-kashmiri-pashmina-500/30 hover:-translate-y-0.5 transition-all duration-200"
+                        className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 bg-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-0.5 transition-all duration-200"
                       >
                         <CheckCircle className="w-4 h-4" />
                         View Quote

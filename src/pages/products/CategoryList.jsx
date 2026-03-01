@@ -37,16 +37,16 @@ const categoryIcons = {
   default: "📦",
 };
 
-// Category gradient colors - Kashmiri palette
+// Category gradient colors - Indigo palette
 const categoryGradients = [
-  "from-kashmiri-dal-500 to-kashmiri-pashmina-600",
-  "from-kashmiri-pashmina-500 to-kashmiri-saffron-600",
-  "from-kashmiri-saffron-500 to-kashmiri-chinar-600",
-  "from-kashmiri-chinar-500 to-kashmiri-dal-600",
-  "from-kashmiri-dal-400 to-kashmiri-saffron-500",
-  "from-kashmiri-pashmina-400 to-kashmiri-chinar-500",
-  "from-kashmiri-saffron-400 to-kashmiri-dal-500",
-  "from-kashmiri-chinar-400 to-kashmiri-pashmina-500",
+  "from-indigo-500 to-indigo-700",
+  "from-indigo-400 to-indigo-600",
+  "from-indigo-500 to-indigo-700",
+  "from-indigo-600 to-indigo-800",
+  "from-indigo-400 to-indigo-600",
+  "from-indigo-300 to-indigo-500",
+  "from-indigo-400 to-indigo-600",
+  "from-indigo-500 to-indigo-700",
 ];
 
 export default function CategoryList() {
@@ -80,10 +80,10 @@ export default function CategoryList() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
         <div className="text-center">
           <div className="relative">
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 flex items-center justify-center shadow-2xl shadow-kashmiri-dal-500/30">
+            <div className="w-20 h-20 rounded-2xl bg-indigo-600 flex items-center justify-center shadow-2xl shadow-indigo-500/30">
               <Loader2 className="h-10 w-10 animate-spin text-white" />
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function CategoryList() {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center px-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center px-4">
         <div className="text-center max-w-md">
           <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-red-100 to-red-50 dark:from-red-900/30 dark:to-red-950/30 flex items-center justify-center mx-auto mb-6 shadow-lg">
             <Package className="h-10 w-10 text-red-500" />
@@ -108,7 +108,7 @@ export default function CategoryList() {
           <p className="text-slate-600 dark:text-slate-400 mb-6">{error}</p>
           <button
             onClick={() => window.location.reload()}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white font-semibold shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl transition-all duration-200"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-500/25 hover:shadow-xl transition-all duration-200"
           >
             Try Again
           </button>
@@ -145,10 +145,10 @@ export default function CategoryList() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-kashmiri-dal-100 via-kashmiri-pashmina-100 to-kashmiri-saffron-100 dark:from-kashmiri-dal-950/50 dark:via-kashmiri-pashmina-950/50 dark:to-kashmiri-saffron-950/50 border border-kashmiri-dal-200 dark:border-kashmiri-dal-800 mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-100 dark:from-indigo-950/50 dark:to-indigo-950/50 border border-indigo-200 dark:border-indigo-800 mb-6"
           >
-            <Sparkles className="w-4 h-4 text-kashmiri-dal-600 dark:text-kashmiri-dal-400" />
-            <span className="text-sm font-medium text-kashmiri-dal-700 dark:text-kashmiri-dal-300">
+            <Sparkles className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+            <span className="text-sm font-medium text-indigo-700 dark:text-indigo-300">
               {isGovt
                 ? "Government Procurement Portal"
                 : "Premium Product Catalog"}
@@ -156,7 +156,7 @@ export default function CategoryList() {
           </motion.div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500">
+            <span className="text-indigo-600 dark:text-indigo-400">
               Browse by Category
             </span>
           </h1>
@@ -274,7 +274,7 @@ export default function CategoryList() {
                     <div
                       className="h-1.5 bg-gradient-to-r rounded-t-2xl"
                       style={{
-                        background: `linear-gradient(to right, var(--kashmiri-dal-500), var(--kashmiri-pashmina-500))`,
+                        background: `linear-gradient(to right, #4f46e5, #6366f1)`,
                       }}
                     />
 
@@ -302,8 +302,8 @@ export default function CategoryList() {
                         </div>
                         {/* Product count badge */}
                         <div
-                          className="absolute -top-2 -right-2 px-2.5 py-1 rounded-full bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500
-                          text-white text-xs font-bold shadow-lg shadow-kashmiri-dal-500/30"
+                          className="absolute -top-2 -right-2 px-2.5 py-1 rounded-full bg-indigo-600
+                          text-white text-xs font-bold shadow-lg shadow-indigo-500/30"
                         >
                           {cat.count}
                         </div>

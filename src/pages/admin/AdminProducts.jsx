@@ -12,10 +12,11 @@ const CATEGORIES = [
   "Networking equipment",
   "Computers",
   "Printers",
-  "IT Accessories",
   "Software",
   "Storage",
   "Electronic Appliances",
+  "Furnitiure",
+  "Laptop"
 ];
 
 export default function AdminProducts() {

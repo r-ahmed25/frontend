@@ -38,7 +38,7 @@ export default function CartItem({ item, onIncrease, onDecrease, onRemove }) {
           <h3 className="font-semibold text-lg text-slate-900 truncate">
             {product.name}
           </h3>
-          <p className="text-kashmiri-dal-600 font-semibold text-lg mt-1">
+          <p className="text-indigo-600 font-semibold text-lg mt-1">
             ₹{product.price?.toLocaleString("en-IN")}
           </p>
 

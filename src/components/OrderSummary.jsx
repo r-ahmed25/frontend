@@ -48,7 +48,7 @@ function Row({ label, value, highlight, primary, subtle }) {
       <span
         className={
           primary
-            ? "text-kashmiri-dal-600 font-semibold"
+            ? "text-indigo-600 font-semibold"
             : highlight
               ? "text-green-600"
               : subtle
@@ -59,7 +59,7 @@ function Row({ label, value, highlight, primary, subtle }) {
         {label}
       </span>
       <span
-        className={`font-medium ${primary ? "text-kashmiri-dal-600" : "text-slate-900"}`}
+        className={`font-medium ${primary ? "text-indigo-600" : "text-slate-900"}`}
       >
         ₹
         {typeof value === "number" && !isNaN(value) ? value.toFixed(2) : "0.00"}

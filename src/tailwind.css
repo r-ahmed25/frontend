@@ -2,49 +2,15 @@
 @import "tailwindcss";
 
 /* ================================
-   🎨 Tailwind v4 Theme Configuration
-   Kashmiri Color Palette
+   Tailwind v4 Theme Configuration
+   Clean Professional
 =================================*/
 @theme {
-  --color-kashmiri-dal-50: #f0f9ff;
-  --color-kashmiri-dal-100: #e0f2fe;
-  --color-kashmiri-dal-200: #bae6fd;
-  --color-kashmiri-dal-300: #7dd3fc;
-  --color-kashmiri-dal-400: #38bdf8;
-  --color-kashmiri-dal-500: #2d5a87;
-  --color-kashmiri-dal-600: #1e3a5f;
-  --color-kashmiri-dal-700: #0c4a6e;
-
-  --color-kashmiri-saffron-50: #fff7ed;
-  --color-kashmiri-saffron-100: #ffedd5;
-  --color-kashmiri-saffron-200: #fed7aa;
-  --color-kashmiri-saffron-300: #fdba74;
-  --color-kashmiri-saffron-400: #fb923c;
-  --color-kashmiri-saffron-500: #c2410c;
-  --color-kashmiri-saffron-600: #9a3412;
-  --color-kashmiri-saffron-700: #7c2d12;
-
-  --color-kashmiri-pashmina-50: #faf5ff;
-  --color-kashmiri-pashmina-100: #f3e8ff;
-  --color-kashmiri-pashmina-200: #e9d5ff;
-  --color-kashmiri-pashmina-300: #d8b4fe;
-  --color-kashmiri-pashmina-400: #c084fc;
-  --color-kashmiri-pashmina-500: #7c3aed;
-  --color-kashmiri-pashmina-600: #6b21a8;
-  --color-kashmiri-pashmina-700: #581c87;
-
-  --color-kashmiri-chinar-50: #fef2f2;
-  --color-kashmiri-chinar-100: #fee2e2;
-  --color-kashmiri-chinar-200: #fecaca;
-  --color-kashmiri-chinar-300: #fca5a5;
-  --color-kashmiri-chinar-400: #f87171;
-  --color-kashmiri-chinar-500: #dc2626;
-  --color-kashmiri-chinar-600: #b91c1c;
-  --color-kashmiri-chinar-700: #991b1b;
+  /* No custom color tokens — using Tailwind defaults + CSS variables */
 }
 
 /* ================================
-   🎨 Modern Professional Design System
+   Modern Professional Design System
    Cutting Edge Enterprises
 =================================*/
 
@@ -69,28 +35,6 @@
   }
   50% {
     transform: translateY(-6px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(37, 99, 235, 0.5);
-  }
-}
-
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 
@@ -126,7 +70,7 @@
 }
 
 /* ================================
-   🌓 Base Layer - Theme Variables
+   Base Layer - Theme Variables
 =================================*/
 @layer base {
   html {
@@ -214,17 +158,12 @@
   input:focus,
   button:focus,
   a:focus {
-    @apply outline-none ring-2 ring-blue-500 dark:ring-blue-400 ring-offset-0;
-  }
-
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
+    @apply outline-none ring-2 ring-indigo-500 dark:ring-indigo-400 ring-offset-0;
   }
 
   /* Selection */
   ::selection {
-    @apply bg-blue-500/20 text-slate-900 dark:text-white;
+    @apply bg-indigo-500/20 text-slate-900 dark:text-white;
   }
 
   /* Scrollbar */
@@ -247,7 +186,7 @@
 }
 
 /* ================================
-   🧩 Components Layer
+   Components Layer
 =================================*/
 @layer components {
   /* Animation utilities */
@@ -256,13 +195,6 @@
   }
   .animate-float {
     animation: float 3s ease-in-out infinite;
-  }
-  .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
-  }
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
   }
   .animate-shimmer {
     background: linear-gradient(
@@ -294,12 +226,12 @@
   }
 
   .dark .glass-morphism {
-    background: rgba(17, 24, 39, 0.8);
+    background: rgba(15, 23, 42, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   /* ================================
-     🎴 Card System
+     Card System
   =================================*/
   .theme-card {
     @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-sm;
@@ -307,7 +239,7 @@
   }
 
   .theme-card:hover {
-    @apply shadow-md dark:shadow-lg;
+    @apply shadow-md;
   }
 
   .card {
@@ -316,7 +248,7 @@
   }
 
   .card-hover:hover {
-    @apply shadow-lg -translate-y-1;
+    @apply shadow-md -translate-y-1;
   }
 
   .card-interactive {
@@ -324,20 +256,20 @@
   }
 
   .card-interactive:hover {
-    @apply shadow-xl -translate-y-2 border-blue-500 dark:border-blue-400;
+    @apply shadow-md -translate-y-2 border-indigo-500 dark:border-indigo-400;
   }
 
   /* ================================
-     🔘 Button System
+     Button System
   =================================*/
   /* Primary Buttons */
   .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white border border-blue-600/20;
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white;
     transition: all 0.2s ease;
   }
 
   .btn-primary:hover {
-    @apply bg-blue-700 shadow-lg transform -translate-y-0.5;
+    @apply bg-indigo-700 shadow-md transform -translate-y-0.5;
   }
 
   .btn-primary:active {
@@ -346,42 +278,42 @@
 
   /* Secondary Buttons */
   .btn-secondary {
-    @apply bg-slate-600 hover:bg-slate-700 text-white border border-slate-600/20;
+    @apply bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700;
     transition: all 0.2s ease;
   }
 
   .btn-secondary:hover {
-    @apply bg-slate-700 shadow-lg transform -translate-y-0.5;
+    @apply bg-slate-200 dark:bg-slate-700 shadow-sm transform -translate-y-0.5;
   }
 
   /* Success Buttons */
   .btn-success {
-    @apply bg-green-600 hover:bg-green-700 text-white border border-green-600/20;
+    @apply bg-green-600 hover:bg-green-700 text-white;
     transition: all 0.2s ease;
   }
 
   .btn-success:hover {
-    @apply bg-green-700 shadow-lg transform -translate-y-0.5;
+    @apply bg-green-700 shadow-md transform -translate-y-0.5;
   }
 
   /* Warning Buttons */
   .btn-warning {
-    @apply bg-yellow-600 hover:bg-yellow-700 text-white border border-yellow-600/20;
+    @apply bg-yellow-600 hover:bg-yellow-700 text-white;
     transition: all 0.2s ease;
   }
 
   .btn-warning:hover {
-    @apply bg-yellow-700 shadow-lg transform -translate-y-0.5;
+    @apply bg-yellow-700 shadow-md transform -translate-y-0.5;
   }
 
   /* Danger Buttons */
   .btn-danger {
-    @apply bg-red-600 hover:bg-red-700 text-white border border-red-600/20;
+    @apply bg-red-600 hover:bg-red-700 text-white;
     transition: all 0.2s ease;
   }
 
   .btn-danger:hover {
-    @apply bg-red-700 shadow-lg transform -translate-y-0.5;
+    @apply bg-red-700 shadow-md transform -translate-y-0.5;
   }
 
   /* Ghost Buttons */
@@ -391,7 +323,7 @@
   }
 
   .btn-ghost:hover {
-    @apply border-slate-400 dark:border-slate-500 shadow-md;
+    @apply border-slate-400 dark:border-slate-500 shadow-sm;
   }
 
   /* Outline Buttons */
@@ -401,102 +333,100 @@
   }
 
   .btn-outline:hover {
-    @apply border-slate-600 dark:border-slate-400 shadow-md;
+    @apply border-slate-600 dark:border-slate-400 shadow-sm;
   }
 
-  /* Theme-aware buttons with gradient */
+  /* Theme-aware buttons — solid indigo */
   .btn-theme-primary {
-    @apply bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white border border-transparent;
-    background-size: 200% 200%;
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white border border-transparent;
     transition: all 0.3s ease;
   }
 
   .btn-theme-primary:hover {
-    @apply shadow-xl transform -translate-y-0.5;
-    background-position: 100% 50%;
+    @apply shadow-md transform -translate-y-0.5;
   }
 
   .btn-theme-secondary {
-    @apply bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 text-white border border-slate-500/30;
+    @apply bg-slate-600 hover:bg-slate-700 text-white border border-transparent;
     transition: all 0.3s ease;
   }
 
   .btn-theme-secondary:hover {
-    @apply shadow-xl transform -translate-y-0.5;
+    @apply shadow-md transform -translate-y-0.5;
   }
 
   .btn-theme-success {
-    @apply bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white border border-green-500/30;
+    @apply bg-green-600 hover:bg-green-700 text-white border border-transparent;
     transition: all 0.3s ease;
   }
 
   .btn-theme-success:hover {
-    @apply shadow-xl transform -translate-y-0.5;
+    @apply shadow-md transform -translate-y-0.5;
   }
 
   .btn-theme-warning {
-    @apply bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white border border-yellow-500/30;
+    @apply bg-yellow-600 hover:bg-yellow-700 text-white border border-transparent;
     transition: all 0.3s ease;
   }
 
   .btn-theme-warning:hover {
-    @apply shadow-xl transform -translate-y-0.5;
+    @apply shadow-md transform -translate-y-0.5;
   }
 
   .btn-theme-danger {
-    @apply bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white border border-red-500/30;
+    @apply bg-red-600 hover:bg-red-700 text-white border border-transparent;
     transition: all 0.3s ease;
   }
 
   .btn-theme-danger:hover {
-    @apply shadow-xl transform -translate-y-0.5;
+    @apply shadow-md transform -translate-y-0.5;
   }
 
   /* Dark mode button overrides */
   .dark .btn-primary {
-    @apply bg-blue-500 hover:bg-blue-600 border-blue-500/20;
+    @apply bg-indigo-500 hover:bg-indigo-600;
   }
 
   .dark .btn-secondary {
-    @apply bg-slate-700 hover:bg-slate-600 border-slate-600/20;
+    @apply bg-slate-700 hover:bg-slate-600;
   }
 
   .dark .btn-success {
-    @apply bg-green-500 hover:bg-green-600 border-green-500/20;
+    @apply bg-green-500 hover:bg-green-600;
   }
 
   .dark .btn-warning {
-    @apply bg-yellow-500 hover:bg-yellow-600 border-yellow-500/20;
+    @apply bg-yellow-500 hover:bg-yellow-600;
   }
 
   .dark .btn-danger {
-    @apply bg-red-500 hover:bg-red-600 border-red-500/20;
+    @apply bg-red-500 hover:bg-red-600;
   }
 
   /* ================================
-     📝 Input System
+     Input System
   =================================*/
   .theme-input {
-    @apply w-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 shadow-sm transition-all duration-300 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20;
+    @apply w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 shadow-sm transition-all duration-200 focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20;
   }
 
   .theme-input:hover {
-    @apply shadow-md;
+    @apply shadow-sm;
   }
 
   .theme-input:focus {
-    @apply border-blue-500 dark:border-blue-400;
+    @apply border-indigo-500 dark:border-indigo-400;
   }
 
   /* ================================
-     🏷️ Badge System
+     Badge System
   =================================*/
   .badge {
     @apply inline-flex items-center px-3 py-1 text-xs font-medium rounded-full transition-all duration-200;
   }
 
   .badge-primary {
-    @apply bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400;
+    @apply bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400;
   }
 
   .badge-secondary {
@@ -516,14 +446,11 @@
   }
 
   /* ================================
-     🎯 Special Components
+     Special Components
   =================================*/
-  /* Text gradient */
+  /* Text gradient — solid indigo */
   .text-gradient {
-    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #ec4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    @apply text-indigo-600 dark:text-indigo-400;
   }
 
   /* Theme text */
@@ -548,38 +475,35 @@
   }
 
   /* ================================
-     🎨 Cutting Edge Brand Classes
+     Cutting Edge Brand Classes
   =================================*/
   .ce-text-gradient {
-    background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @apply text-indigo-600 dark:text-indigo-400;
   }
 
   .ce-card {
-    @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200 dark:border-slate-700 rounded-3xl;
-    box-shadow: 0 20px 60px -15px rgba(37, 99, 235, 0.15);
+    @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-3xl shadow-sm;
   }
 
   .ce-input {
-    @apply w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent;
+    @apply w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent;
   }
 
   .ce-button-primary {
-    @apply text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600;
+    @apply text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 bg-indigo-600 hover:bg-indigo-700;
   }
 
   .ce-button-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
   }
 
   .ce-link {
-    @apply text-blue-600 dark:text-blue-400 font-semibold hover:underline;
+    @apply text-indigo-600 dark:text-indigo-400 font-semibold hover:underline;
   }
 
   /* ================================
-     🎨 Page Backgrounds
+     Page Backgrounds
   =================================*/
   .bg-page {
     @apply bg-white dark:bg-slate-950;
@@ -589,43 +513,18 @@
     @apply bg-slate-50 dark:bg-slate-900;
   }
 
-  /* Hero gradient text */
+  /* Hero gradient text — solid indigo */
   .hero-gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600;
+    @apply text-indigo-600 dark:text-indigo-400;
   }
 
   .hero-gradient-badge {
-    @apply bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/30 dark:via-indigo-950/30 dark:to-purple-950/30 text-blue-700 dark:text-blue-300;
+    @apply bg-indigo-50 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300;
   }
 
-  /* Gradient mesh background */
+  /* Gradient mesh background — subtle */
   .bg-gradient-mesh {
-    background:
-      radial-gradient(
-        at 40% 20%,
-        hsla(228, 100%, 74%, 0.1) 0px,
-        transparent 50%
-      ),
-      radial-gradient(
-        at 80% 0%,
-        hsla(189, 100%, 56%, 0.08) 0px,
-        transparent 50%
-      ),
-      radial-gradient(
-        at 0% 50%,
-        hsla(355, 100%, 93%, 0.08) 0px,
-        transparent 50%
-      ),
-      radial-gradient(
-        at 80% 50%,
-        hsla(340, 100%, 76%, 0.08) 0px,
-        transparent 50%
-      ),
-      radial-gradient(
-        at 0% 100%,
-        hsla(269, 100%, 77%, 0.08) 0px,
-        transparent 50%
-      );
+    @apply bg-slate-50 dark:bg-slate-900;
   }
 
   /* Skeleton loading */
@@ -635,7 +534,7 @@
 }
 
 /* ================================
-   🔧 Utilities Layer
+   Utilities Layer
 =================================*/
 @layer utilities {
   .backdrop-blur-xl {
@@ -666,250 +565,5 @@
     box-shadow:
       0 20px 40px rgba(0, 0, 0, 0.15),
       0 5px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  /* Glow utilities */
-  .shadow-glow-primary {
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
-  }
-  .shadow-glow-accent {
-    box-shadow: 0 0 20px rgba(217, 70, 239, 0.3);
-  }
-  .shadow-glow-success {
-    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
-  }
-
-  /* ================================
-     🏔️ Kashmir Heritage Design System
-     =================================*/
-  /* Kashmiri Color Palette */
-  .kashmir-dal {
-    color: #2d5a87;
-  } /* Dal Lake blue */
-  .kashmir-saffron {
-    color: #c2410c;
-  } /* Kashmiri Saffron */
-  .kashmir-pashmina {
-    color: #7c3aed;
-  } /* Royal Pashmina purple */
-  .kashmir-chinar {
-    color: #dc2626;
-  } /* Chinar red */
-  .kashmir-walnut {
-    color: #78350f;
-  } /* Walnut wood brown */
-  .kashmir-snow {
-    color: #f0f9ff;
-  } /* Himalayan snow white */
-  .kashmir-pine {
-    color: #166534;
-  } /* Pine green */
-  .kashmir-zaffran {
-    color: #ea580c;
-  } /* Saffron orange */
-
-  /* Background colors */
-  .bg-kashmir-dal {
-    background-color: #2d5a87;
-  }
-  .bg-kashmir-saffron {
-    background-color: #c2410c;
-  }
-  .bg-kashmir-pashmina {
-    background-color: #7c3aed;
-  }
-  .bg-kashmir-chinar {
-    background-color: #dc2626;
-  }
-  .bg-kashmir-walnut {
-    background-color: #78350f;
-  }
-  .bg-kashmir-snow {
-    background-color: #f0f9ff;
-  }
-  .bg-kashmir-pine {
-    background-color: #166534;
-  }
-
-  /* Chinar Leaf Pattern - Decorative border */
-  .kashmir-chinar-border {
-    border-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(220, 38, 38, 0.1) 10px,
-        rgba(220, 38, 38, 0.1) 20px
-      )
-      1;
-  }
-
-  /* Papier-mâché inspired pattern overlay */
-  .kashmir-papier-mache {
-    background-image:
-      radial-gradient(
-        circle at 25% 25%,
-        rgba(124, 58, 237, 0.05) 0%,
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at 75% 75%,
-        rgba(194, 65, 12, 0.05) 0%,
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at 50% 50%,
-        rgba(45, 90, 135, 0.03) 0%,
-        transparent 70%
-      );
-  }
-
-  /* Khatamband (geometric ceiling pattern) inspired */
-  .kashmir-khatamband {
-    background-image:
-      linear-gradient(
-        30deg,
-        rgba(45, 90, 135, 0.03) 12%,
-        transparent 12.5%,
-        transparent 87%,
-        rgba(45, 90, 135, 0.03) 87.5%,
-        rgba(45, 90, 135, 0.03)
-      ),
-      linear-gradient(
-        150deg,
-        rgba(45, 90, 135, 0.03) 12%,
-        transparent 12.5%,
-        transparent 87%,
-        rgba(45, 90, 135, 0.03) 87.5%,
-        rgba(45, 90, 135, 0.03)
-      ),
-      linear-gradient(
-        30deg,
-        rgba(45, 90, 135, 0.03) 12%,
-        transparent 12.5%,
-        transparent 87%,
-        rgba(45, 90, 135, 0.03) 87.5%,
-        rgba(45, 90, 135, 0.03)
-      ),
-      linear-gradient(
-        150deg,
-        rgba(45, 90, 135, 0.03) 12%,
-        transparent 12.5%,
-        transparent 87%,
-        rgba(45, 90, 135, 0.03) 87.5%,
-        rgba(45, 90, 135, 0.03)
-      ),
-      linear-gradient(
-        60deg,
-        rgba(124, 58, 237, 0.04) 25%,
-        transparent 25.5%,
-        transparent 75%,
-        rgba(124, 58, 237, 0.04) 75%,
-        rgba(124, 58, 237, 0.04)
-      ),
-      linear-gradient(
-        60deg,
-        rgba(124, 58, 237, 0.04) 25%,
-        transparent 25.5%,
-        transparent 75%,
-        rgba(124, 58, 237, 0.04) 75%,
-        rgba(124, 58, 237, 0.04)
-      );
-    background-size: 80px 140px;
-    background-position:
-      0 0,
-      0 0,
-      40px 70px,
-      40px 70px,
-      0 0,
-      40px 70px;
-  }
-
-  /* Pashmina weave texture */
-  .kashmir-pashmina-weave {
-    background-image:
-      repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(124, 58, 237, 0.02) 2px,
-        rgba(124, 58, 237, 0.02) 4px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 2px,
-        rgba(124, 58, 237, 0.02) 2px,
-        rgba(124, 58, 237, 0.02) 4px
-      );
-  }
-
-  /* Kashmir gradient - inspired by Dal Lake sunset */
-  .kashmir-gradient {
-    background: linear-gradient(135deg, #2d5a87 0%, #7c3aed 50%, #dc2626 100%);
-  }
-
-  .kashmir-gradient-text {
-    background: linear-gradient(135deg, #2d5a87 0%, #7c3aed 50%, #c2410c 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Mountain silhouette decoration */
-  .kashmir-mountains {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%232d5a87' fill-opacity='0.05' d='M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,181.3C960,203,1056,213,1152,197.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-  }
-
-  /* Aari embroidery inspired border */
-  .kashmir-aari-border {
-    border: 2px solid transparent;
-    background:
-      linear-gradient(white, white) padding-box,
-      repeating-linear-gradient(
-          45deg,
-          #7c3aed,
-          #7c3aed 5px,
-          #c2410c 5px,
-          #c2410c 10px
-        )
-        border-box;
-  }
-
-  .dark .kashmir-aari-border {
-    background:
-      linear-gradient(#0f172a, #0f172a) padding-box,
-      repeating-linear-gradient(
-          45deg,
-          #7c3aed,
-          #7c3aed 5px,
-          #c2410c 5px,
-          #c2410c 10px
-        )
-        border-box;
-  }
-
-  /* Heritage card with subtle Kashmiri pattern */
-  .kashmir-heritage-card {
-    @apply relative overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700;
-  }
-
-  .kashmir-heritage-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #2d5a87, #7c3aed, #c2410c, #dc2626);
-  }
-
-  /* Shikara (boat) wave pattern */
-  .kashmir-waves {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='%232d5a87' fill-opacity='0.03' d='M0,50 C150,100 350,0 500,50 C650,100 850,0 1000,50 C1150,100 1350,0 1440,50 L1440,100 L0,100 Z'%3E%3C/path%3E%3C/svg%3E");
-    background-repeat: repeat-x;
-    background-position: bottom;
   }
 }

@@ -52,7 +52,7 @@ export default function ServicesList() {
           transition={{ duration: 0.4 }}
           className="text-center"
         >
-          <span className="inline-block px-4 py-1.5 mb-4 text-xs font-semibold uppercase tracking-widest text-kashmiri-dal-600 dark:text-kashmiri-dal-400 bg-kashmiri-dal-50 dark:bg-kashmiri-dal-900/30 rounded-full">
+          <span className="inline-block px-4 py-1.5 mb-4 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 rounded-full">
             Professional Services
           </span>
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-3">
@@ -95,7 +95,7 @@ export default function ServicesList() {
                 placeholder="Search services..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-kashmiri-dal-500/50 focus:border-kashmiri-dal-500 transition-all duration-200"
+                className="w-full pl-12 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all duration-200"
               />
             </div>
 
@@ -107,7 +107,7 @@ export default function ServicesList() {
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full pl-12 pr-10 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-kashmiri-dal-500/50 focus:border-kashmiri-dal-500 transition-all duration-200 appearance-none cursor-pointer"
+                className="w-full pl-12 pr-10 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all duration-200 appearance-none cursor-pointer"
               >
                 <option value="ALL">All categories</option>
                 <option value="Networking">Networking</option>

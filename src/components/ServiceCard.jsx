@@ -28,7 +28,7 @@ export default function ServiceCard({ service, index, isAuthenticated }) {
   const Icon = ICON_MAP[service.slug] || Building2;
   const gradient =
     GRADIENT_MAP[service.slug] ||
-    "from-kashmiri-dal-500 to-kashmiri-pashmina-500";
+    "from-indigo-600 to-indigo-500";
 
   const canShowRate = isAuthenticated || service.showRateToGuests;
 
@@ -77,7 +77,7 @@ export default function ServiceCard({ service, index, isAuthenticated }) {
         {/* RATE */}
         <div className="mt-4 flex items-center gap-3">
           {canShowRate ? (
-            <span className="inline-flex rounded-full bg-gradient-to-r from-kashmiri-dal-100 to-kashmiri-pashmina-100 dark:from-kashmiri-dal-900/40 dark:to-kashmiri-pashmina-900/40 px-4 py-1.5 text-sm font-semibold text-kashmiri-dal-700 dark:text-kashmiri-dal-300">
+            <span className="inline-flex rounded-full bg-indigo-100 dark:bg-indigo-900/40 px-4 py-1.5 text-sm font-semibold text-indigo-700 dark:text-indigo-300">
               {service.rateLabel}
             </span>
           ) : (
@@ -94,7 +94,7 @@ export default function ServiceCard({ service, index, isAuthenticated }) {
             <Link
               to={`/services/enquiry?service=${service.slug}`}
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white font-semibold text-sm shadow-md hover:shadow-lg hover:shadow-kashmiri-dal-500/25 hover:-translate-y-0.5 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-semibold text-sm shadow-md hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5 transition-all duration-200"
             >
               Enquire Now
             </Link>

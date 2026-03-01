@@ -89,25 +89,25 @@ const FEATURES = [
     icon: Shield,
     title: "Genuine Products",
     description: "100% authentic products with manufacturer warranty",
-    color: "from-kashmiri-dal-500 to-blue-600",
+    color: "from-indigo-600 to-blue-600",
   },
   {
     icon: Clock,
     title: "Fast Delivery",
     description: "Quick turnaround with real-time tracking",
-    color: "from-kashmiri-pashmina-500 to-purple-600",
+    color: "from-indigo-500 to-purple-600",
   },
   {
     icon: Headphones,
     title: "Expert Support",
     description: "Dedicated support for all your queries",
-    color: "from-kashmiri-saffron-500 to-orange-600",
+    color: "from-indigo-500 to-orange-600",
   },
   {
     icon: Sparkles,
     title: "Quality Service",
     description: "Professional installation and maintenance",
-    color: "from-kashmiri-chinar-500 to-red-600",
+    color: "from-red-500 to-red-600",
   },
 ];
 
@@ -258,9 +258,9 @@ export default function Home() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
-                  className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-medium bg-kashmiri-dal-100 dark:bg-kashmiri-dal-900/30 text-kashmiri-dal-700 dark:text-kashmiri-dal-300 mb-4 sm:mb-6"
+                  className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 mb-4 sm:mb-6"
                 >
-                  <Sparkles size={12} className="text-kashmiri-dal-500" />
+                  <Sparkles size={12} className="text-indigo-600" />
                   {hero.badge}
                 </motion.div>
 
@@ -291,7 +291,7 @@ export default function Home() {
                   transition={{ delay: 0.25 }}
                   className="mt-2 text-sm text-slate-500 dark:text-slate-400 flex items-center justify-center lg:justify-start gap-2"
                 >
-                  <Mountain size={14} className="text-kashmiri-dal-500" />
+                  <Mountain size={14} className="text-indigo-600" />
                   <span>{hero.tagline}</span>
                 </motion.p>
 
@@ -329,7 +329,7 @@ export default function Home() {
                 >
                   {TRUST_METRICS.map((metric, index) => (
                     <div key={index} className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-kashmiri-dal-500 to-kashmiri-pashmina-500 flex items-center justify-center shadow-md">
+                      <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center shadow-md">
                         <metric.icon size={14} className="text-white" />
                       </div>
                       <div className="text-left">
@@ -361,7 +361,7 @@ export default function Home() {
                     />
                     <div className="space-y-3">
                       <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-700/50">
-                        <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-kashmiri-dal-500 to-kashmiri-pashmina-600 flex items-center justify-center">
+                        <div className="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center">
                           <PackageSearch size={18} className="text-white" />
                         </div>
                         <div>
@@ -392,7 +392,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="absolute -top-3 -left-3 w-16 h-16 bg-gradient-to-br from-kashmiri-dal-200 to-kashmiri-pashmina-200 dark:from-kashmiri-dal-800 dark:to-kashmiri-pashmina-800 rounded-xl opacity-40 blur-lg" />
+                  <div className="absolute -top-3 -left-3 w-16 h-16 bg-indigo-200 dark:bg-indigo-800 rounded-xl opacity-40 blur-lg" />
                 </div>
               </motion.div>
 
@@ -495,7 +495,7 @@ export default function Home() {
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-3xl shadow-xl p-4 sm:p-8 lg:p-12">
             {/* Section Header */}
             <div className="text-center mb-10">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-kashmiri-dal-100 to-kashmiri-pashmina-100 dark:from-kashmiri-dal-950/50 dark:to-kashmiri-pashmina-950/50 text-kashmiri-dal-700 dark:text-kashmiri-dal-300">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-indigo-100 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300">
                 Quick Access Panel
               </span>
               <h3 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">
@@ -510,9 +510,9 @@ export default function Home() {
             <RoleGate allow={["PRIVATE"]}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 max-w-4xl mx-auto mb-8 sm:mb-12">
                 <div className={cardBase}>
-                  <div className="absolute inset-0 bg-gradient-to-br from-kashmiri-dal-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-kashmiri-dal-500 to-kashmiri-pashmina-600 flex items-center justify-center shadow-lg shadow-kashmiri-dal-500/25 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 mb-4">
                       <ShoppingCart className="text-white" size={22} />
                     </div>
                     <h4 className="font-bold text-lg text-slate-900 dark:text-white mb-1">
@@ -524,7 +524,7 @@ export default function Home() {
                   </div>
                   <Link
                     to="/cart"
-                    className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5"
+                    className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5"
                   >
                     View Cart
                     <ArrowRight size={16} />
@@ -532,9 +532,9 @@ export default function Home() {
                 </div>
 
                 <div className={cardBase}>
-                  <div className="absolute inset-0 bg-gradient-to-br from-kashmiri-pashmina-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-kashmiri-pashmina-500 to-kashmiri-saffron-600 flex items-center justify-center shadow-lg shadow-kashmiri-pashmina-500/25 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 mb-4">
                       <ClipboardList className="text-white" size={22} />
                     </div>
                     <h4 className="font-bold text-lg text-slate-900 dark:text-white mb-1">
@@ -546,7 +546,7 @@ export default function Home() {
                   </div>
                   <Link
                     to="/orders"
-                    className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-kashmiri-pashmina-500 to-kashmiri-saffron-500 text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5"
+                    className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5"
                   >
                     My Orders
                     <ArrowRight size={16} />

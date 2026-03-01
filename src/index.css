@@ -1,51 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 /* ================================
-   🎨 Tailwind v4 Theme Configuration
-   Cutting Edge Enterprises
+   Tailwind v4 Theme Configuration
+   Cutting Edge Enterprises — Clean Professional
 =================================*/
 @theme {
-  /* Kashmiri-inspired cultural colors */
-  --color-kashmiri-dal-50: #f0f9ff;
-  --color-kashmiri-dal-100: #e0f2fe;
-  --color-kashmiri-dal-200: #bae6fd;
-  --color-kashmiri-dal-300: #7dd3fc;
-  --color-kashmiri-dal-400: #38bdf8;
-  --color-kashmiri-dal-500: #2d5a87;
-  --color-kashmiri-dal-600: #1e3a5f;
-  --color-kashmiri-dal-700: #0c4a6e;
-
-  --color-kashmiri-saffron-50: #fff7ed;
-  --color-kashmiri-saffron-100: #ffedd5;
-  --color-kashmiri-saffron-200: #fed7aa;
-  --color-kashmiri-saffron-300: #fdba74;
-  --color-kashmiri-saffron-400: #fb923c;
-  --color-kashmiri-saffron-500: #c2410c;
-  --color-kashmiri-saffron-600: #9a3412;
-  --color-kashmiri-saffron-700: #7c2d12;
-
-  --color-kashmiri-pashmina-50: #faf5ff;
-  --color-kashmiri-pashmina-100: #f3e8ff;
-  --color-kashmiri-pashmina-200: #e9d5ff;
-  --color-kashmiri-pashmina-300: #d8b4fe;
-  --color-kashmiri-pashmina-400: #c084fc;
-  --color-kashmiri-pashmina-500: #7c3aed;
-  --color-kashmiri-pashmina-600: #6b21a8;
-  --color-kashmiri-pashmina-700: #581c87;
-
-  --color-kashmiri-chinar-50: #fef2f2;
-  --color-kashmiri-chinar-100: #fee2e2;
-  --color-kashmiri-chinar-200: #fecaca;
-  --color-kashmiri-chinar-300: #fca5a5;
-  --color-kashmiri-chinar-400: #f87171;
-  --color-kashmiri-chinar-500: #dc2626;
-  --color-kashmiri-chinar-600: #b91c1c;
-  --color-kashmiri-chinar-700: #991b1b;
+  /* No custom color definitions needed — using Tailwind defaults + CSS variables */
 }
 
 /* ================================
-   🎨 Modern Professional Design System
+   Modern Professional Design System
    Cutting Edge Enterprises
 =================================*/
 
@@ -70,28 +35,6 @@
   }
   50% {
     transform: translateY(-6px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(37, 99, 235, 0.5);
-  }
-}
-
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 
@@ -127,7 +70,7 @@
 }
 
 /* ================================
-   🌓 Base Layer - Theme Variables
+   Base Layer - Theme Variables
 =================================*/
 @layer base {
   /* Light Theme - Clean & Professional */
@@ -144,8 +87,8 @@
     --text-light: #94a3b8;
     --icon: #475569;
 
-    --cta-bg: #2563eb;
-    --cta-bg-hover: #1d4ed8;
+    --cta-bg: #4f46e5;
+    --cta-bg-hover: #4338ca;
     --cta-text: #ffffff;
 
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -157,29 +100,29 @@
       0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
     /* Accent colors */
-    --accent-primary: #2563eb;
-    --accent-secondary: #7c3aed;
+    --accent-primary: #4f46e5;
+    --accent-secondary: #6366f1;
     --accent-success: #16a34a;
     --accent-warning: #d97706;
     --accent-danger: #dc2626;
   }
 
-  /* Dark Theme - Elegant & Modern */
+  /* Dark Theme */
   .dark {
-    --bg: #0a0f1a;
-    --surface: #111827;
-    --surface-alt: #1f2937;
+    --bg: #020617;
+    --surface: #0f172a;
+    --surface-alt: #1e293b;
 
-    --card-bg: #1a2332;
-    --card-border: #2d3748;
+    --card-bg: #0f172a;
+    --card-border: #1e293b;
 
     --text: #f1f5f9;
     --text-muted: #94a3b8;
     --text-light: #64748b;
     --icon: #cbd5e1;
 
-    --cta-bg: #3b82f6;
-    --cta-bg-hover: #60a5fa;
+    --cta-bg: #6366f1;
+    --cta-bg-hover: #818cf8;
     --cta-text: #ffffff;
 
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
@@ -190,8 +133,8 @@
     --shadow-xl:
       0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
 
-    --accent-primary: #3b82f6;
-    --accent-secondary: #a78bfa;
+    --accent-primary: #6366f1;
+    --accent-secondary: #818cf8;
     --accent-success: #22c55e;
     --accent-warning: #f59e0b;
     --accent-danger: #ef4444;
@@ -267,80 +210,10 @@
     outline-offset: 2px;
   }
 
-  /* Selection - Subtle Kashmiri blue accent */
+  /* Selection */
   ::selection {
-    background-color: rgba(37, 99, 235, 0.2);
+    background-color: rgba(79, 70, 229, 0.2);
     color: var(--text);
-  }
-
-  /* Kashmiri-inspired decorative accent for special elements */
-  .kashmiri-accent {
-    background: linear-gradient(
-      135deg,
-      rgba(37, 99, 235, 0.05) 0%,
-      rgba(124, 58, 237, 0.05) 50%,
-      rgba(236, 72, 153, 0.05) 100%
-    );
-  }
-
-  /* Traditional Kashmiri colors - inspired by Pashmina, Saffron, Dal Lake & Himalayas */
-  .kashmiri-gradient {
-    background: linear-gradient(
-      135deg,
-      #1e3a5f 0%,
-      /* Deep Indigo - Night sky over Dal Lake */ #2d5a87 25%,
-      /* Lake Blue - Dal Lake waters */ #7c3aed 50%,
-      /* Royal Purple - Pashmina heritage */ #c2410c 75%,
-      /* Saffron Orange - Kashmiri Kesar */ #dc2626 100%
-        /* Traditional Red - Papier-mâché art */
-    );
-  }
-
-  /* Kashmiri papier-mâché inspired pattern */
-  .kashmiri-pattern {
-    background-image:
-      radial-gradient(
-        circle at 20% 80%,
-        rgba(124, 58, 237, 0.08) 0%,
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at 80% 20%,
-        rgba(37, 99, 235, 0.08) 0%,
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at 40% 40%,
-        rgba(236, 72, 153, 0.05) 0%,
-        transparent 30%
-      ),
-      radial-gradient(
-        circle at 60% 60%,
-        rgba(194, 65, 12, 0.05) 0%,
-        transparent 30%
-      );
-  }
-
-  /* Mountain silhouette effect - inspired by Himalayan backdrop */
-  .mountain-backdrop {
-    background: linear-gradient(
-      180deg,
-      transparent 0%,
-      rgba(30, 58, 95, 0.03) 50%,
-      rgba(45, 90, 135, 0.05) 100%
-    );
-  }
-
-  /* Chinar leaf inspired decorative element */
-  .chinar-accent {
-    position: relative;
-  }
-
-  .chinar-accent::before {
-    content: "🍁";
-    position: absolute;
-    opacity: 0.1;
-    font-size: 2rem;
   }
 
   /* Scrollbar */
@@ -364,7 +237,7 @@
 }
 
 /* ================================
-   🧩 Components Layer
+   Components Layer
 =================================*/
 @layer components {
   /* Animation utilities */
@@ -373,13 +246,6 @@
   }
   .animate-float {
     animation: float 3s ease-in-out infinite;
-  }
-  .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
-  }
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
   }
   .animate-shimmer {
     background: linear-gradient(
@@ -399,7 +265,7 @@
   }
 
   /* ================================
-     🎴 Card System
+     Card System
   =================================*/
   .card {
     background-color: var(--card-bg);
@@ -410,7 +276,7 @@
   }
 
   .card-hover:hover {
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
     transform: translateY(-2px);
   }
 
@@ -419,7 +285,7 @@
   }
 
   .card-interactive:hover {
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
     transform: translateY(-4px);
     border-color: var(--accent-primary);
   }
@@ -433,12 +299,12 @@
   }
 
   .dark .glass {
-    background: rgba(17, 24, 39, 0.8);
+    background: rgba(15, 23, 42, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   /* ================================
-     🔘 Button System
+     Button System
   =================================*/
   .btn {
     display: inline-flex;
@@ -462,14 +328,14 @@
 
   /* Primary Button */
   .btn-primary {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    background: #4f46e5;
     color: white;
-    box-shadow: 0 1px 3px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 1px 2px rgba(79, 70, 229, 0.2);
   }
 
   .btn-primary:hover:not(:disabled) {
-    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    background: #4338ca;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
     transform: translateY(-1px);
   }
 
@@ -513,40 +379,37 @@
 
   /* Success Button */
   .btn-success {
-    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    background: #16a34a;
     color: white;
-    box-shadow: 0 1px 3px rgba(22, 163, 74, 0.3);
   }
 
   .btn-success:hover:not(:disabled) {
-    background: linear-gradient(135deg, #15803d 0%, #166534 100%);
-    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
+    background: #15803d;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
     transform: translateY(-1px);
   }
 
   /* Warning Button */
   .btn-warning {
-    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    background: #d97706;
     color: white;
-    box-shadow: 0 1px 3px rgba(217, 119, 6, 0.3);
   }
 
   .btn-warning:hover:not(:disabled) {
-    background: linear-gradient(135deg, #b45309 0%, #92400e 100%);
-    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.4);
+    background: #b45309;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
     transform: translateY(-1px);
   }
 
   /* Danger Button */
   .btn-danger {
-    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    background: #dc2626;
     color: white;
-    box-shadow: 0 1px 3px rgba(220, 38, 38, 0.3);
   }
 
   .btn-danger:hover:not(:disabled) {
-    background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
-    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+    background: #b91c1c;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
     transform: translateY(-1px);
   }
 
@@ -571,7 +434,7 @@
   }
 
   /* ================================
-     📝 Input System
+     Input System
   =================================*/
   .input {
     width: 100%;
@@ -595,7 +458,7 @@
 
   .input:focus {
     border-color: var(--accent-primary);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
   }
 
   .input-error {
@@ -623,7 +486,7 @@
   }
 
   /* ================================
-     🏷️ Badge System
+     Badge System
   =================================*/
   .badge {
     display: inline-flex;
@@ -636,8 +499,8 @@
   }
 
   .badge-primary {
-    background-color: rgba(37, 99, 235, 0.1);
-    color: #2563eb;
+    background-color: rgba(79, 70, 229, 0.1);
+    color: #4f46e5;
   }
 
   .badge-secondary {
@@ -661,7 +524,7 @@
   }
 
   /* ================================
-     📊 Table System
+     Table System
   =================================*/
   .table-container {
     overflow-x: auto;
@@ -700,55 +563,24 @@
   }
 
   /* ================================
-     🎯 Special Components
+     Special Components
   =================================*/
-  /* Gradient Text */
+  /* Gradient Text — now solid indigo */
   .text-gradient {
-    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #ec4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #4f46e5;
   }
 
   .text-gradient-blue {
-    background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #4f46e5;
   }
 
-  /* Gradient Backgrounds */
+  /* Gradient Backgrounds — now solid indigo */
   .bg-gradient-primary {
-    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    background: #4f46e5;
   }
 
   .bg-gradient-mesh {
-    background:
-      radial-gradient(
-        at 40% 20%,
-        hsla(228, 100%, 74%, 0.15) 0px,
-        transparent 50%
-      ),
-      radial-gradient(
-        at 80% 0%,
-        hsla(189, 100%, 56%, 0.1) 0px,
-        transparent 50%
-      ),
-      radial-gradient(
-        at 0% 50%,
-        hsla(355, 100%, 93%, 0.1) 0px,
-        transparent 50%
-      ),
-      radial-gradient(
-        at 80% 50%,
-        hsla(340, 100%, 76%, 0.1) 0px,
-        transparent 50%
-      ),
-      radial-gradient(
-        at 0% 100%,
-        hsla(269, 100%, 77%, 0.1) 0px,
-        transparent 50%
-      );
+    background: var(--surface);
   }
 
   /* Skeleton Loading */
@@ -777,7 +609,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 9999px;
-    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    background: #4f46e5;
     color: white;
     font-weight: 600;
   }
@@ -838,9 +670,8 @@
   }
 
   /* ================================
-     🎨 Legacy Support Classes
+     Legacy Support Classes
   =================================*/
-  /* Theme-aware components (for backward compatibility) */
   .theme-card {
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -872,7 +703,7 @@
 
   .theme-input:focus {
     border-color: var(--cta-bg);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
   }
 
   .theme-text {
@@ -885,64 +716,69 @@
     transition: background-color 0.3s ease;
   }
 
-  /* Legacy button classes */
+  /* Legacy button classes — solid colors */
   .btn-theme-primary {
-    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    background: #4f46e5;
     color: white;
     font-weight: 500;
     transition: all 0.3s ease;
   }
 
   .btn-theme-primary:hover {
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    background: #4338ca;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
     transform: translateY(-1px);
   }
 
   .btn-theme-secondary {
-    background: linear-gradient(135deg, #475569 0%, #334155 100%);
+    background: #475569;
     color: white;
     font-weight: 500;
     transition: all 0.3s ease;
   }
 
   .btn-theme-secondary:hover {
-    box-shadow: 0 10px 25px rgba(71, 85, 105, 0.3);
+    background: #334155;
+    box-shadow: 0 4px 12px rgba(71, 85, 105, 0.3);
     transform: translateY(-1px);
   }
 
   .btn-theme-success {
-    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    background: #16a34a;
     color: white;
     font-weight: 500;
     transition: all 0.3s ease;
   }
 
   .btn-theme-success:hover {
-    box-shadow: 0 10px 25px rgba(22, 163, 74, 0.3);
+    background: #15803d;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
     transform: translateY(-1px);
   }
 
   .btn-theme-warning {
-    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    background: #d97706;
     color: white;
     font-weight: 500;
     transition: all 0.3s ease;
   }
 
   .btn-theme-warning:hover {
-    box-shadow: 0 10px 25px rgba(217, 119, 6, 0.3);
+    background: #b45309;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
     transform: translateY(-1px);
   }
 
   .btn-theme-danger {
-    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    background: #dc2626;
     color: white;
     font-weight: 500;
     transition: all 0.3s ease;
   }
 
   .btn-theme-danger:hover {
-    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+    background: #b91c1c;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
     transform: translateY(-1px);
   }
 
@@ -955,35 +791,26 @@
     background-color: var(--surface);
   }
 
-  /* Hero gradient text */
+  /* Hero gradient text — solid indigo */
   .hero-gradient-text {
-    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #ec4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #4f46e5;
   }
 
   .hero-gradient-badge {
-    background: linear-gradient(
-      135deg,
-      rgba(37, 99, 235, 0.1) 0%,
-      rgba(124, 58, 237, 0.1) 100%
-    );
-    color: #2563eb;
+    background: rgba(79, 70, 229, 0.1);
+    color: #4f46e5;
   }
 
   /* Cutting Edge brand classes */
   .ce-text-gradient {
-    background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #4f46e5;
   }
 
   .ce-card {
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 1.5rem;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-sm);
   }
 
   .ce-input {
@@ -999,11 +826,11 @@
   .ce-input:focus {
     outline: none;
     border-color: var(--accent-primary);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
   }
 
   .ce-button-primary {
-    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    background: #4f46e5;
     color: white;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
@@ -1012,8 +839,9 @@
   }
 
   .ce-button-primary:hover {
+    background: #4338ca;
     transform: translateY(-1px);
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
   }
 
   .ce-link {
@@ -1028,7 +856,7 @@
 }
 
 /* ================================
-   🔧 Utilities Layer
+   Utilities Layer
 =================================*/
 @layer utilities {
   .backdrop-blur-xl {
@@ -1059,16 +887,5 @@
     box-shadow:
       0 20px 40px rgba(0, 0, 0, 0.15),
       0 5px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  /* Glow utilities */
-  .shadow-glow-primary {
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
-  }
-  .shadow-glow-accent {
-    box-shadow: 0 0 20px rgba(217, 70, 239, 0.3);
-  }
-  .shadow-glow-success {
-    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
   }
 }

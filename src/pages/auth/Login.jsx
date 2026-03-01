@@ -80,7 +80,7 @@ export default function Login() {
 
   return (
     <motion.div
-      className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center px-4 sm:px-6"
+      className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center px-4 sm:px-6"
       variants={authPageVariants}
       initial="hidden"
       animate="visible"
@@ -98,7 +98,7 @@ export default function Login() {
         >
           {/* Logo */}
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 flex items-center justify-center shadow-2xl shadow-kashmiri-dal-500/30">
+            <div className="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center shadow-2xl shadow-indigo-500/30">
               <span className="text-white font-bold text-2xl">CE</span>
             </div>
             <div>
@@ -112,7 +112,7 @@ export default function Login() {
           {/* Heading */}
           <h2 className="text-4xl xl:text-5xl font-bold text-slate-900 dark:text-white leading-tight mb-6">
             Welcome to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500">
+            <span className="text-indigo-600 dark:text-indigo-400">
               Cutting Edge
             </span>{" "}
             Enterprises
@@ -133,8 +133,8 @@ export default function Login() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
               >
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-kashmiri-dal-500/10 to-kashmiri-pashmina-500/10 dark:from-kashmiri-dal-500/20 dark:to-kashmiri-pashmina-500/20 flex items-center justify-center">
-                  <feature.icon className="w-5 h-5 text-kashmiri-dal-600 dark:text-kashmiri-dal-400" />
+                <div className="w-10 h-10 rounded-xl bg-indigo-500/10 dark:bg-indigo-500/20 flex items-center justify-center">
+                  <feature.icon className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                 </div>
                 <span className="text-slate-700 dark:text-slate-300 font-medium">
                   {feature.text}
@@ -154,7 +154,7 @@ export default function Login() {
           >
             {/* Mobile Logo */}
             <div className="lg:hidden flex items-center justify-center gap-3 mb-8">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 flex items-center justify-center shadow-lg shadow-kashmiri-dal-500/25">
+              <div className="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/25">
                 <span className="text-white font-bold text-lg">CE</span>
               </div>
               <div>
@@ -222,7 +222,7 @@ export default function Login() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-kashmiri-dal-500/50 focus:border-kashmiri-dal-500 transition-all duration-200"
+                      className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export default function Login() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
-                      className="w-full pl-12 pr-12 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-kashmiri-dal-500/50 focus:border-kashmiri-dal-500 transition-all duration-200"
+                      className="w-full pl-12 pr-12 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all duration-200"
                     />
                     <button
                       type="button"
@@ -256,7 +256,7 @@ export default function Login() {
                 <motion.button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 text-white font-semibold shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl hover:shadow-kashmiri-pashmina-500/30 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 flex items-center justify-center gap-2"
+                  className="w-full py-3.5 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 flex items-center justify-center gap-2"
                   variants={buttonHoverVariants}
                   whileHover="hover"
                   whileTap="tap"
@@ -322,7 +322,7 @@ export default function Login() {
                 Don't have an account?{" "}
                 <Link
                   to="/register"
-                  className="font-semibold text-kashmiri-dal-600 dark:text-kashmiri-dal-400 hover:text-kashmiri-pashmina-600 dark:hover:text-kashmiri-pashmina-400 hover:underline underline-offset-2 transition-all duration-200"
+                  className="font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 hover:underline underline-offset-2 transition-all duration-200"
                 >
                   Create one
                 </Link>

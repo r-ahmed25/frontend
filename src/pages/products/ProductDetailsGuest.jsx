@@ -92,14 +92,14 @@ export default function ProductDetailsGuest() {
 
   if (loading)
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
-        <div className="animate-spin h-12 w-12 border-b-2 border-kashmiri-dal-500 rounded-full" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
+        <div className="animate-spin h-12 w-12 border-b-2 border-indigo-600 rounded-full" />
       </div>
     );
 
   if (error)
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
         <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 text-center shadow-xl">
           <p className="text-red-600 font-semibold mb-2">
             Error Loading Product
@@ -107,7 +107,7 @@ export default function ProductDetailsGuest() {
           <p className="text-slate-600 dark:text-slate-400">{error}</p>
           <button
             onClick={() => navigate(-1)}
-            className="mt-4 bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white px-4 py-2 rounded-xl shadow-lg shadow-kashmiri-dal-500/25"
+            className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-xl shadow-lg shadow-indigo-500/25"
           >
             Go Back
           </button>
@@ -116,7 +116,7 @@ export default function ProductDetailsGuest() {
     );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-4 sm:px-6 py-10 sm:py-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-4 sm:px-6 py-10 sm:py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
         {/* ================= IMAGES ================= */}
         {product.images?.length > 0 && (
@@ -134,13 +134,13 @@ export default function ProductDetailsGuest() {
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white px-3 py-1 rounded-xl shadow-lg"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-indigo-600 text-white px-3 py-1 rounded-xl shadow-lg"
                   >
                     ‹
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white px-3 py-1 rounded-xl shadow-lg"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-indigo-600 text-white px-3 py-1 rounded-xl shadow-lg"
                   >
                     ›
                   </button>
@@ -155,7 +155,7 @@ export default function ProductDetailsGuest() {
                       onClick={() => setCurrentImageIndex(i)}
                       className={`w-20 h-20 rounded-xl overflow-hidden border-2 ${
                         i === currentImageIndex
-                          ? "border-kashmiri-dal-500"
+                          ? "border-indigo-600"
                           : "border-white/30"
                       }`}
                     >
@@ -175,7 +175,7 @@ export default function ProductDetailsGuest() {
         {/* ================= DETAILS ================= */}
         <div className="space-y-6">
           <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl p-6 border border-slate-200/50 dark:border-slate-800/50">
-            <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 mb-2">
+            <h1 className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">
               {product.name}
             </h1>
             {product.category && (
@@ -222,7 +222,7 @@ export default function ProductDetailsGuest() {
             <div className="space-y-3">
               <button
                 onClick={() => navigate("/login")}
-                className="w-full bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white py-3 rounded-xl font-semibold shadow-lg shadow-kashmiri-dal-500/25"
+                className="w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold shadow-lg shadow-indigo-500/25"
               >
                 Login to Continue
               </button>
@@ -238,7 +238,7 @@ export default function ProductDetailsGuest() {
 
           <button
             onClick={() => navigate("/products-guest")}
-            className="bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg shadow-kashmiri-dal-500/25"
+            className="bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg shadow-indigo-500/25"
           >
             ← Back to Products
           </button>
@@ -314,7 +314,7 @@ export default function ProductDetailsGuest() {
         {/* Reviews List */}
         {reviewsLoading ? (
           <div className="flex justify-center py-8">
-            <div className="animate-spin h-8 w-8 border-b-2 border-kashmiri-dal-500 rounded-full" />
+            <div className="animate-spin h-8 w-8 border-b-2 border-indigo-600 rounded-full" />
           </div>
         ) : reviews.length > 0 ? (
           <div className="space-y-4">
@@ -325,8 +325,8 @@ export default function ProductDetailsGuest() {
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-kashmiri-dal-100 to-kashmiri-pashmina-100 dark:from-kashmiri-dal-900/30 dark:to-kashmiri-pashmina-900/30 flex items-center justify-center">
-                      <span className="text-kashmiri-dal-600 dark:text-kashmiri-dal-400 font-semibold">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-100 to-indigo-100 dark:from-indigo-900/30 dark:to-indigo-900/30 flex items-center justify-center">
+                      <span className="text-indigo-600 dark:text-indigo-400 font-semibold">
                         {review.user?.name?.charAt(0).toUpperCase() || "U"}
                       </span>
                     </div>
@@ -375,7 +375,7 @@ export default function ProductDetailsGuest() {
           <div className="flex justify-center mt-6">
             <button
               onClick={() => setReviewPage((p) => p + 1)}
-              className="bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white px-6 py-2 rounded-xl shadow-lg shadow-kashmiri-dal-500/25"
+              className="bg-indigo-600 text-white px-6 py-2 rounded-xl shadow-lg shadow-indigo-500/25"
             >
               Load More Reviews
             </button>

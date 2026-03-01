@@ -174,7 +174,7 @@ export default function Checkout() {
 
   return (
     <RoleGate allow={["PRIVATE"]}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 py-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 py-8">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 grid md:grid-cols-3 gap-6">
           {/* LEFT: ITEMS */}
           <div className="md:col-span-2 space-y-6">
@@ -182,7 +182,7 @@ export default function Checkout() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
                 Checkout
               </h2>
               <p className="text-slate-500 mt-1">Complete your order</p>
@@ -247,25 +247,25 @@ export default function Checkout() {
             >
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-kashmiri-dal-500" />
+                  <MapPin className="w-5 h-5 text-indigo-600" />
                   Delivery Address
                 </h3>
                 <button
                   onClick={() => setShowAddressModal(true)}
-                  className="text-sm font-medium text-kashmiri-dal-600 hover:text-kashmiri-pashmina-600 transition-colors"
+                  className="text-sm font-medium text-indigo-600 hover:text-indigo-700 transition-colors"
                 >
                   {selectedAddress ? "Change" : "+ Add New Address"}
                 </button>
               </div>
 
               {selectedAddress ? (
-                <div className="border-2 border-kashmiri-dal-500 bg-kashmiri-dal-50/50 rounded-xl p-4">
+                <div className="border-2 border-indigo-600 bg-indigo-50/50 rounded-xl p-4">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="font-semibold text-gray-900">
                       {selectedAddress.label}
                     </span>
                     {selectedAddress.isDefault && (
-                      <span className="bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white text-xs px-2 py-1 rounded-full">
+                      <span className="bg-indigo-600 text-white text-xs px-2 py-1 rounded-full">
                         Default
                       </span>
                     )}
@@ -300,7 +300,7 @@ export default function Checkout() {
                   <p>Please select a delivery address</p>
                   <button
                     onClick={() => setShowAddressModal(true)}
-                    className="mt-2 text-kashmiri-dal-600 hover:text-kashmiri-pashmina-600 font-medium"
+                    className="mt-2 text-indigo-600 hover:text-indigo-700 font-medium"
                   >
                     Select Address
                   </button>
@@ -316,7 +316,7 @@ export default function Checkout() {
               className="bg-white/80 backdrop-blur-xl border border-slate-200/50 rounded-2xl shadow-lg shadow-slate-200/50 p-6"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <CreditCard className="w-5 h-5 text-kashmiri-dal-500" />
+                <CreditCard className="w-5 h-5 text-indigo-600" />
                 Payment Method
               </h3>
               <div className="space-y-3">
@@ -324,7 +324,7 @@ export default function Checkout() {
                 <label
                   className={`flex items-center p-4 border-2 rounded-xl cursor-pointer transition-all duration-200 ${
                     paymentMethod === "online"
-                      ? "border-kashmiri-dal-500 bg-kashmiri-dal-50/50"
+                      ? "border-indigo-600 bg-indigo-50/50"
                       : "border-slate-200 hover:border-slate-300 hover:bg-slate-50"
                   }`}
                 >
@@ -334,7 +334,7 @@ export default function Checkout() {
                     value="online"
                     checked={paymentMethod === "online"}
                     onChange={(e) => setPaymentMethod(e.target.value)}
-                    className="w-4 h-4 text-kashmiri-dal-600 border-slate-300 focus:ring-kashmiri-dal-500"
+                    className="w-4 h-4 text-indigo-600 border-slate-300 focus:ring-indigo-500"
                   />
                   <div className="ml-3 flex-1">
                     <div className="flex items-center justify-between">
@@ -355,7 +355,7 @@ export default function Checkout() {
                 <label
                   className={`flex items-center p-4 border-2 rounded-xl cursor-pointer transition-all duration-200 ${
                     paymentMethod === "cod"
-                      ? "border-kashmiri-dal-500 bg-kashmiri-dal-50/50"
+                      ? "border-indigo-600 bg-indigo-50/50"
                       : "border-slate-200 hover:border-slate-300 hover:bg-slate-50"
                   }`}
                 >
@@ -365,7 +365,7 @@ export default function Checkout() {
                     value="cod"
                     checked={paymentMethod === "cod"}
                     onChange={(e) => setPaymentMethod(e.target.value)}
-                    className="w-4 h-4 text-kashmiri-dal-600 border-slate-300 focus:ring-kashmiri-dal-500"
+                    className="w-4 h-4 text-indigo-600 border-slate-300 focus:ring-indigo-500"
                   />
                   <div className="ml-3 flex-1">
                     <div className="flex items-center justify-between">
@@ -409,9 +409,9 @@ export default function Checkout() {
               disabled={placing || !cart?.items?.length || !selectedAddress}
               onClick={handlePlaceOrder}
               className="w-full py-4 rounded-xl font-semibold
-                        bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500
-                        text-white shadow-lg shadow-kashmiri-dal-500/25
-                        hover:shadow-xl hover:shadow-kashmiri-pashmina-500/30
+                        bg-indigo-600
+                        text-white shadow-lg shadow-indigo-500/25
+                        hover:shadow-xl hover:shadow-indigo-600/30
                         hover:-translate-y-0.5 transition-all duration-300
                         disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
             >

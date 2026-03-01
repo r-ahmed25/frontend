@@ -28,7 +28,7 @@ export default function Cart() {
 
   return (
     <RoleGate allow={["PRIVATE"]}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 py-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 py-8">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           {/* Header */}
           <motion.div
@@ -36,7 +36,7 @@ export default function Cart() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-8"
           >
-            <h1 className="text-3xl sm:text-4xl font-bold mb-2 bg-linear-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-2 text-indigo-600 dark:text-indigo-400">
               Shopping Cart
             </h1>
             <p className="text-slate-500">Review your items before checkout</p>
@@ -56,9 +56,9 @@ export default function Cart() {
                 to="/products"
                 className="inline-flex items-center justify-center gap-2
                             px-6 py-3 rounded-xl font-semibold
-                            bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500
-                            text-white shadow-lg shadow-kashmiri-dal-500/25
-                            hover:shadow-xl hover:shadow-kashmiri-pashmina-500/30
+                            bg-indigo-600
+                            text-white shadow-lg shadow-indigo-500/25
+                            hover:shadow-xl hover:shadow-indigo-600/30
                             hover:-translate-y-0.5 transition-all duration-300"
               >
                 <ShoppingBag className="w-5 h-5" />
@@ -104,9 +104,9 @@ export default function Cart() {
               <button
                 onClick={() => navigate("/checkout")}
                 className="flex items-center gap-2 px-6 py-3 rounded-xl font-medium
-                          bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500
-                          text-white shadow-lg shadow-kashmiri-dal-500/25
-                          hover:shadow-xl hover:shadow-kashmiri-pashmina-500/30
+                          bg-indigo-600
+                          text-white shadow-lg shadow-indigo-500/25
+                          hover:shadow-xl hover:shadow-indigo-600/30
                           hover:-translate-y-0.5 transition-all duration-300"
               >
                 Proceed to Checkout

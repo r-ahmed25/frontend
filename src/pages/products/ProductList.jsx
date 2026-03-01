@@ -61,9 +61,9 @@ export default function ProductList() {
   // Loading State
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 flex items-center justify-center animate-pulse">
+          <div className="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center animate-pulse">
             <Package className="w-8 h-8 text-white" />
           </div>
           <p className="text-slate-500 dark:text-slate-400">
@@ -77,7 +77,7 @@ export default function ProductList() {
   // Error State
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 rounded-2xl bg-red-100 dark:bg-red-900/30 flex items-center justify-center mx-auto mb-4">
             <X className="w-8 h-8 text-red-500" />
@@ -89,7 +89,7 @@ export default function ProductList() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-4 sm:px-6 py-8 sm:py-12">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-4 sm:px-6 py-8 sm:py-12">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header Section */}
         <motion.div
@@ -213,7 +213,7 @@ export default function ProductList() {
 
                     <Link
                       to={`/products/${product._id}`}
-                      className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white text-sm font-semibold shadow-md hover:shadow-lg hover:shadow-kashmiri-dal-500/25 hover:-translate-y-0.5 transition-all duration-200"
+                      className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold shadow-md hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5 transition-all duration-200"
                     >
                       View
                       <ArrowRight size={14} />
@@ -300,7 +300,7 @@ export default function ProductList() {
                       <td className="px-6 py-4 text-center">
                         <Link
                           to={`/products/${product._id}`}
-                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white text-sm font-medium shadow-md shadow-kashmiri-dal-500/20 hover:shadow-lg transition-all duration-200"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-md shadow-indigo-500/20 hover:shadow-lg transition-all duration-200"
                         >
                           View
                           <ArrowRight size={14} />
@@ -397,7 +397,7 @@ export default function ProductList() {
                       onClick={() => setCurrentPage(pageNum)}
                       className={`w-10 h-10 rounded-xl font-medium transition-all duration-200 ${
                         currentPage === pageNum
-                          ? "bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white shadow-md shadow-kashmiri-dal-500/20"
+                          ? "bg-indigo-600 text-white shadow-md shadow-indigo-500/20"
                           : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700"
                       }`}
                     >
@@ -502,7 +502,7 @@ export default function ProductList() {
                   {/* View Details Button */}
                   <Link
                     to={`/products/${selectedProduct._id}`}
-                    className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 text-white font-semibold shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl hover:shadow-kashmiri-pashmina-500/30 transition-all duration-300"
+                    className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 transition-all duration-300"
                     onClick={() => setSelectedProduct(null)}
                   >
                     View Full Details

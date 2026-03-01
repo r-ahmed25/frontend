@@ -25,7 +25,7 @@ import {
 const statusConfig = {
   PLACED: {
     label: "Order Placed",
-    color: "bg-kashmiri-dal-100/80 text-kashmiri-dal-700 border-kashmiri-dal-200",
+    color: "bg-indigo-100/80 text-indigo-700 border-indigo-200",
     icon: ShoppingBag,
     description: "Your order has been received and is being processed.",
   },
@@ -195,10 +195,10 @@ export default function OrderDetails() {
   if (loading) {
     return (
       <RoleGate allow={["PRIVATE"]}>
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 py-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 py-8">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 flex items-center justify-center min-h-[400px]">
             <div className="flex flex-col items-center gap-3">
-              <Loader2 className="w-8 h-8 animate-spin text-kashmiri-dal-600" />
+              <Loader2 className="w-8 h-8 animate-spin text-indigo-600" />
               <p className="text-slate-500">Loading order details...</p>
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function OrderDetails() {
   if (error) {
     return (
       <RoleGate allow={["PRIVATE"]}>
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 py-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 py-8">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -225,7 +225,7 @@ export default function OrderDetails() {
               <div className="flex justify-center gap-3 mt-4">
                 <button
                   onClick={() => window.location.reload()}
-                  className="px-4 py-2 rounded-xl font-medium bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                  className="px-4 py-2 rounded-xl font-medium bg-indigo-600 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
                 >
                   Try Again
                 </button>
@@ -246,7 +246,7 @@ export default function OrderDetails() {
   if (!order) {
     return (
       <RoleGate allow={["PRIVATE"]}>
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 py-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 py-8">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -262,7 +262,7 @@ export default function OrderDetails() {
               </p>
               <Link
                 to="/orders"
-                className="inline-flex items-center mt-4 font-medium text-kashmiri-dal-600 hover:text-kashmiri-pashmina-600 transition-colors"
+                className="inline-flex items-center mt-4 font-medium text-indigo-600 hover:text-indigo-700 transition-colors"
               >
                 <ArrowLeft className="w-4 h-4 mr-1" />
                 Back to Orders
@@ -281,7 +281,7 @@ export default function OrderDetails() {
 
   return (
     <RoleGate allow={["PRIVATE"]}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 py-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {/* Back Button */}
           <motion.div
@@ -328,7 +328,7 @@ export default function OrderDetails() {
                       state: { invoice: buildInvoice(order) },
                     })
                   }
-                  className="inline-flex items-center px-4 py-2 rounded-xl font-medium bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                  className="inline-flex items-center px-4 py-2 rounded-xl font-medium bg-indigo-600 text-white shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Download Invoice

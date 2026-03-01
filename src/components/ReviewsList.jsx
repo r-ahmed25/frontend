@@ -131,8 +131,8 @@ export default function ReviewsList({
                   <div className="flex items-center gap-3">
                     {/* Avatar */}
                     <div
-                      className="w-10 h-10 rounded-full bg-gradient-to-br from-kashmiri-dal-100 to-kashmiri-pashmina-100 
-                      flex items-center justify-center text-kashmiri-dal-600 font-semibold"
+                      className="w-10 h-10 rounded-full bg-indigo-100
+                      flex items-center justify-center text-indigo-600 font-semibold"
                     >
                       {review.user?.name?.charAt(0).toUpperCase() || "U"}
                     </div>
@@ -218,7 +218,7 @@ export default function ReviewsList({
                     onClick={() => handleHelpful(review._id, true)}
                     disabled={helpfulLoading === review._id}
                     className="flex items-center gap-2 text-sm text-slate-600 
-                      hover:text-kashmiri-dal-600 transition-colors disabled:opacity-50"
+                      hover:text-indigo-600 transition-colors disabled:opacity-50"
                   >
                     <ThumbsUp className="w-4 h-4" />
                     Helpful ({review.helpfulVotes || 0})

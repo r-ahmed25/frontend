@@ -170,9 +170,9 @@ export default function ProductDetails() {
   /* ================= LOADING STATE ================= */
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 flex items-center justify-center animate-pulse">
+          <div className="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center animate-pulse">
             <Package className="w-8 h-8 text-white" />
           </div>
           <p className="text-slate-500 dark:text-slate-400">
@@ -186,7 +186,7 @@ export default function ProductDetails() {
   /* ================= ERROR STATE ================= */
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center p-4">
         <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-3xl p-8 text-center max-w-md shadow-xl">
           <div className="w-16 h-16 rounded-2xl bg-red-100 dark:bg-red-900/30 flex items-center justify-center mx-auto mb-4">
             <AlertTriangle className="w-8 h-8 text-red-500" />
@@ -197,7 +197,7 @@ export default function ProductDetails() {
           <p className="text-slate-500 dark:text-slate-400 mb-6">{error}</p>
           <button
             onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white font-semibold shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl transition-all duration-200"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-500/25 hover:shadow-xl transition-all duration-200"
           >
             <ArrowLeft size={18} />
             Go Back
@@ -209,7 +209,7 @@ export default function ProductDetails() {
 
   /* ================= PAGE ================= */
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-4 sm:px-6 py-8 sm:py-12">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-4 sm:px-6 py-8 sm:py-12">
       <div className="max-w-7xl mx-auto">
         {/* Back Button */}
         <motion.button
@@ -302,7 +302,7 @@ export default function ProductDetails() {
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-3xl shadow-xl p-6 sm:p-8 hover:shadow-2xl transition-shadow duration-300">
               {/* Category Badge */}
               {product.category && (
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-kashmiri-dal-100 to-kashmiri-pashmina-100 dark:from-kashmiri-dal-950/50 dark:to-kashmiri-pashmina-950/50 text-kashmiri-dal-700 dark:text-kashmiri-dal-300 mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-indigo-100 to-indigo-100 dark:from-indigo-950/50 dark:to-indigo-950/50 text-indigo-700 dark:text-indigo-300 mb-4">
                   <Package size={12} />
                   {product.category}
                 </span>
@@ -387,7 +387,7 @@ export default function ProductDetails() {
                     {/* Add to Cart Button */}
                     <motion.button
                       onClick={handleAddToCart}
-                      className="w-full py-4 rounded-xl bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 text-white font-semibold shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl hover:shadow-kashmiri-pashmina-500/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
+                      className="w-full py-4 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
                       whileHover={{ scale: 1.01 }}
                       whileTap={{ scale: 0.99 }}
                     >
@@ -454,7 +454,7 @@ export default function ProductDetails() {
                     setEditingReview(null);
                     setShowReviewForm(true);
                   }}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white font-semibold shadow-md shadow-kashmiri-dal-500/20 hover:shadow-lg transition-all duration-200"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-500/20 hover:shadow-lg transition-all duration-200"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

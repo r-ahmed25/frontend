@@ -169,7 +169,7 @@ export default function ReviewForm({
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Summarize your review"
               className="w-full px-4 py-3 rounded-xl border border-slate-200 
-                focus:outline-none focus:ring-2 focus:ring-kashmiri-dal-500/20 focus:border-kashmiri-dal-500
+                focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500
                 text-slate-900 placeholder:text-slate-400"
               maxLength={100}
             />
@@ -187,7 +187,7 @@ export default function ReviewForm({
               placeholder="Share your experience with this product..."
               rows={4}
               className="w-full px-4 py-3 rounded-xl border border-slate-200 
-                focus:outline-none focus:ring-2 focus:ring-kashmiri-dal-500/20 focus:border-kashmiri-dal-500
+                focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500
                 text-slate-900 placeholder:text-slate-400 resize-none"
               maxLength={1000}
             />
@@ -229,7 +229,7 @@ export default function ReviewForm({
                 <label
                   className="w-20 h-20 border-2 border-dashed border-slate-200 rounded-lg 
                     flex flex-col items-center justify-center cursor-pointer 
-                    hover:border-kashmiri-dal-400 hover:bg-kashmiri-dal-50/50 transition-colors"
+                    hover:border-indigo-400 hover:bg-indigo-50/50 transition-colors"
                 >
                   <Camera className="w-6 h-6 text-slate-400" />
                   <span className="text-xs text-slate-400 mt-1">Add</span>
@@ -258,8 +258,8 @@ export default function ReviewForm({
             <button
               type="submit"
               disabled={loading}
-              className="flex-1 bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white px-6 py-3 rounded-xl font-semibold 
-                shadow-lg shadow-kashmiri-dal-200/50 disabled:opacity-50 flex items-center justify-center gap-2"
+              className="flex-1 bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold
+                shadow-lg shadow-indigo-500/25 disabled:opacity-50 flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>

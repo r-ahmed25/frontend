@@ -63,7 +63,7 @@ export default function Navbar() {
             className="flex items-center gap-3 group"
           >
             <motion.div
-              className="relative flex items-center justify-center w-11 h-11 rounded-2xl bg-gradient-to-br from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 shadow-lg shadow-kashmiri-dal-500/25"
+              className="relative flex items-center justify-center w-11 h-11 rounded-2xl bg-indigo-600 shadow-lg shadow-indigo-500/25"
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -120,7 +120,7 @@ export default function Navbar() {
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         exit={{ scale: 0 }}
-                        className="absolute -top-1 -right-1 bg-gradient-to-r from-kashmiri-chinar-500 to-kashmiri-saffron-500 text-white text-xs font-bold rounded-full min-w-[22px] h-5 flex items-center justify-center px-1.5 shadow-lg"
+                        className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full min-w-[22px] h-5 flex items-center justify-center px-1.5 shadow-lg"
                       >
                         {cartCount}
                       </motion.span>
@@ -135,7 +135,7 @@ export default function Navbar() {
               <div className="flex items-center gap-2 sm:gap-3">
                 {/* User Avatar - Desktop */}
                 <div className="hidden md:flex items-center gap-2 px-3 py-2 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-200">
-                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-kashmiri-dal-500 to-kashmiri-pashmina-500 flex items-center justify-center text-white text-sm font-semibold shadow-md">
+                  <div className="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center text-white text-sm font-semibold shadow-md">
                     {user.name?.charAt(0)?.toUpperCase() || "U"}
                   </div>
                   <span className="text-sm font-medium text-slate-700 dark:text-slate-200 max-w-[100px] lg:max-w-[140px] truncate">
@@ -160,7 +160,7 @@ export default function Navbar() {
                 <motion.div className="flex items-center gap-2">
                   <Link
                     to="/login"
-                    className="flex items-center gap-2 px-5 py-2.5 sm:py-3 rounded-2xl bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 text-white text-sm font-semibold shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl hover:shadow-kashmiri-pashmina-500/30 hover:-translate-y-0.5 transition-all duration-200"
+                    className="flex items-center gap-2 px-5 py-2.5 sm:py-3 rounded-2xl bg-indigo-600 text-white text-sm font-semibold shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-0.5 transition-all duration-200"
                   >
                     <User size={16} strokeWidth={2} />
                     Login
@@ -200,7 +200,7 @@ export default function Navbar() {
               {/* User Info - Mobile */}
               {user && (
                 <div className="flex items-center gap-3 p-4 rounded-2xl bg-slate-100 dark:bg-slate-800 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-kashmiri-dal-500 to-kashmiri-pashmina-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  <div className="w-12 h-12 rounded-2xl bg-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">
                     {user.name?.charAt(0)?.toUpperCase() || "U"}
                   </div>
                   <div>

@@ -93,8 +93,8 @@ export default function MyServiceQuotes() {
               animate={{ opacity: 1, y: 0 }}
               className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg shadow-slate-200/50 dark:shadow-slate-900/50 border border-slate-200/50 dark:border-slate-800/50 p-8 md:p-12 text-center"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-kashmiri-pashmina-100 to-kashmiri-saffron-100 dark:from-kashmiri-pashmina-900/30 dark:to-kashmiri-saffron-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Inbox className="w-10 h-10 text-kashmiri-pashmina-500" />
+              <div className="w-20 h-20 bg-indigo-100 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Inbox className="w-10 h-10 text-indigo-500" />
               </div>
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
                 No Service Quotes Yet
@@ -104,7 +104,7 @@ export default function MyServiceQuotes() {
               </p>
               <a
                 href="/service-enquiries"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 text-white font-semibold rounded-xl shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl hover:shadow-kashmiri-pashmina-500/30 hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-0.5 transition-all duration-200"
               >
                 View My Enquiries
                 <ArrowRight className="w-4 h-4" />
@@ -152,7 +152,7 @@ export default function MyServiceQuotes() {
             transition={{ duration: 0.4 }}
             className="mb-6 md:mb-8"
           >
-            <span className="inline-block px-4 py-1.5 mb-3 text-xs font-semibold uppercase tracking-widest text-kashmiri-pashmina-600 dark:text-kashmiri-pashmina-400 bg-kashmiri-pashmina-50 dark:bg-kashmiri-pashmina-900/30 rounded-full">
+            <span className="inline-block px-4 py-1.5 mb-3 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 rounded-full">
               Service Quotes
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">
@@ -171,7 +171,7 @@ export default function MyServiceQuotes() {
             className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-8"
           >
             <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-lg border border-slate-200/50 dark:border-slate-800/50 p-4 text-center transition-all duration-200 hover:-translate-y-1">
-              <div className="text-2xl font-bold bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
                 {quotes.length}
               </div>
               <div className="text-sm text-slate-500 dark:text-slate-400">Total Quotes</div>
@@ -231,7 +231,7 @@ export default function MyServiceQuotes() {
                           <div className={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg ${
                             expired && quote.status === "SENT"
                               ? "bg-gradient-to-br from-red-500 to-orange-500 shadow-red-500/25"
-                              : "bg-gradient-to-br from-kashmiri-pashmina-500 to-kashmiri-saffron-500 shadow-kashmiri-pashmina-500/25"
+                              : "bg-indigo-600 shadow-indigo-500/25"
                           }`}>
                             <FileText className="w-7 h-7 text-white" />
                           </div>
@@ -325,7 +325,7 @@ export default function MyServiceQuotes() {
                     <div className="mt-5 pt-5 border-t border-slate-100 dark:border-slate-800">
                       <a
                         href={`/service-quotes/${quote._id}`}
-                        className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 text-white font-semibold rounded-xl shadow-lg shadow-kashmiri-dal-500/25 hover:shadow-xl hover:shadow-kashmiri-pashmina-500/30 hover:-translate-y-0.5 transition-all duration-200"
+                        className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 bg-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-600/30 hover:-translate-y-0.5 transition-all duration-200"
                       >
                         <FileText className="w-4 h-4" />
                         View Quote Details

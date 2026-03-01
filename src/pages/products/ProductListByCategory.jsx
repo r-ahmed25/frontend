@@ -184,8 +184,8 @@ export default function ProductListByCategory() {
       <div className="min-h-screen bg-surface flex items-center justify-center">
         <div className="text-center">
           <div className="relative">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 opacity-20 animate-ping absolute inset-0" />
-            <Loader2 className="h-12 w-12 animate-spin text-kashmiri-dal-600 mx-auto relative" />
+            <div className="w-16 h-16 rounded-full bg-indigo-600 opacity-20 animate-ping absolute inset-0" />
+            <Loader2 className="h-12 w-12 animate-spin text-indigo-600 mx-auto relative" />
           </div>
           <p className="text-slate-600 mt-4 font-medium">Loading products...</p>
         </div>
@@ -206,7 +206,7 @@ export default function ProductListByCategory() {
           <p className="text-slate-600 mb-6">{error}</p>
           <button
             onClick={() => window.location.reload()}
-            className="bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-kashmiri-dal-200/50"
+            className="bg-indigo-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-indigo-200/50"
           >
             Try Again
           </button>
@@ -248,13 +248,13 @@ export default function ProductListByCategory() {
         <div className="mb-8">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-kashmiri-dal-50 to-kashmiri-pashmina-50 border border-kashmiri-dal-100 mb-3">
-                <Sparkles className="w-3.5 h-3.5 text-kashmiri-dal-500" />
-                <span className="text-xs font-medium text-kashmiri-dal-700">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-50 to-indigo-50 border border-indigo-100 mb-3">
+                <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+                <span className="text-xs font-medium text-indigo-700">
                   {filteredProducts.length} Products
                 </span>
               </div>
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 mb-2">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">
                 {decodedCategory}
               </h1>
               <p className="text-slate-600">

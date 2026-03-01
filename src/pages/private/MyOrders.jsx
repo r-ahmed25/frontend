@@ -24,7 +24,7 @@ const statusConfig = {
   PLACED: {
     label: "Order Placed",
     color:
-      "bg-kashmiri-dal-100/80 text-kashmiri-dal-700 border-kashmiri-dal-200",
+      "bg-indigo-100/80 text-indigo-700 border-indigo-200",
     icon: ShoppingBag,
   },
   PROCESSING: {
@@ -189,7 +189,7 @@ export default function MyOrders() {
 
   return (
     <RoleGate allow={["PRIVATE"]}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-kashmiri-dal-50 py-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 py-8">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           {/* Header */}
           <motion.div
@@ -197,7 +197,7 @@ export default function MyOrders() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-8"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-2 bg-linear-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-indigo-600 dark:text-indigo-400">
               My Orders
             </h2>
             <p className="text-slate-500">Track and manage your orders</p>
@@ -311,7 +311,7 @@ export default function MyOrders() {
                                 className="w-24 h-24 object-cover rounded-xl border border-slate-200"
                               />
                               {order.items?.length > 1 && (
-                                <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium shadow-md bg-gradient-to-r from-kashmiri-dal-500 to-kashmiri-pashmina-500 text-white">
+                                <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium shadow-md bg-indigo-600 text-white">
                                   +{order.items.length - 1}
                                 </div>
                               )}
@@ -358,7 +358,7 @@ export default function MyOrders() {
                           <div className="flex items-center gap-4 flex-wrap">
                             <Link
                               to={`/orders/${order._id}`}
-                              className="inline-flex items-center font-medium text-sm group text-kashmiri-dal-600 hover:opacity-80 transition-colors"
+                              className="inline-flex items-center font-medium text-sm group text-indigo-600 hover:opacity-80 transition-colors"
                             >
                               View Order Details
                               <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform" />

@@ -39,7 +39,7 @@ export default function BrandTrustStrip({ clientType, page }) {
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
-            <span className="inline-block px-4 py-1.5 mb-4 text-xs font-semibold uppercase tracking-widest text-kashmiri-dal-600 dark:text-kashmiri-dal-400 bg-kashmiri-dal-50 dark:bg-kashmiri-dal-900/30 rounded-full">
+            <span className="inline-block px-4 py-1.5 mb-4 text-xs font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 rounded-full">
               Trusted Partners
             </span>
           </motion.div>
@@ -107,10 +107,10 @@ export default function BrandTrustStrip({ clientType, page }) {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                className="text-center p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-lg hover:border-kashmiri-dal-300 dark:hover:border-kashmiri-dal-600 transition-all duration-300"
+                className="text-center p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-lg hover:border-indigo-300 dark:hover:border-indigo-600 transition-all duration-300"
                 whileHover={{ y: -4 }}
               >
-                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-kashmiri-dal-500 via-kashmiri-pashmina-500 to-kashmiri-saffron-500 bg-clip-text text-transparent">
+                <div className="text-2xl sm:text-3xl font-bold text-indigo-600 dark:text-indigo-400">
                   {stat.value}
                 </div>
                 <div className="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">
